@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import {useState} from "react";
 import './App.css';
+import Card from "./compnents/card/Card";
 
 function App() {
+    const initialProducts = [
+        {name: 'first', count: 0, price: 10},
+        {name: 'second', count: 0, price: 20},
+        {name: 'third', count: 0, price: 30},
+    ]
+    const [searchInput,setSearchInput] = useState('');
+    const handleInputChange = (e) =>{
+        setSearchInput(e.target.value);
+    }
+    const getFilteredProducts = () => {
+        return initialProducts.filter((item) => item.name.includes(searchInput.trim()));
+    }
+    const renderProducts = () => {
+        const filteredProducts = getFilteredProducts();
+        return filteredProducts.length
+            ?filteredProducts.map((item,index) => <Card item={item} key={index+1}/>)
+            :<p>Товары не найдены</p>
+    }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+            <input onChange={handleInputChange} value={searchInput}
+                   type="text" name="name" id=""
+            />
+            {renderProducts()}
     </div>
   );
 }
