@@ -31,7 +31,7 @@ const useCardState = (initialProduct) => {
 const ProductInfo = ({product}) => {
     return(
         <>
-            <Image src={product.image} alt={`${product.title.slice(0, 13)}...`} className={classes.item__image}/>
+            <Image src={product.image} alt={`${product.title.slice(0, 13)}...`} customClasses={classes.item__image}/>
             {`name: ${product.title}`}
             <br/>
             {`count: ${product.count}`}

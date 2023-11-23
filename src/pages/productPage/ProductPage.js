@@ -1,7 +1,8 @@
-import classes from "./ProductPage.module.css";
+import React, {useEffect, useState} from "react";
+import {fetchRequest} from "../../compnents/functions/fetchRequest/fetchRequest";
+import Searcher from "../../compnents/UI/searcher/Searcher";
 import Card from "./card/Card";
-import Searcher from "./searcher/Searcher";
-import {useEffect, useState} from "react";
+import classes from "./ProductPage.module.css";
 
 const ProductList = ({products}) => (
     <div className={classes.itemList}>
@@ -14,34 +15,31 @@ const ProductList = ({products}) => (
 const ProductPage = () => {
     const [products,setProducts] = useState([]);
     const [searchInput,setSearchInput] = useState('');
-    // https://jsonplaceholder.typicode.com.posts
-    // https://fakestoreapi.com/products
-    const fetchData = async (url) => {
-        const response = await fetch(url);
-        return response.json();
-    }
+    const [fetchError,setFetchError] = useState('');
 
     const modifyData = ({data,key,value}) => {
-        return  data.map((item) => ({...item,[key]:value}))
+        return data.map((item) => ({...item,[key]:value}))
     }
-
-    useEffect(()=>{
-        const getData = async () => {
-            const data = await fetchData('https://fakestoreapi.com/products');
-            const modifiedData = modifyData({data,key: 'count',value: 1})
-            setProducts(modifiedData);
-        }
-        getData();
-    },[]);
-
-    const getFilteredProducts = () => {
+    const getFilteredData = () => {
         return products.filter((item) => item.title.includes(searchInput.trim()));
     }
 
+    useEffect(()=>{
+        fetchRequest('https://fakestoreapi.com/products')
+            .then(({status,data,error})=>{
+                if (status !== 200) return setFetchError(error);
+                const modifiedData = modifyData({data,key: 'count',value: 1})
+                setProducts(modifiedData);
+            })
+            .catch(error => {
+                setFetchError(error);
+            })
+    },[]);
+
     return (
-        <div className={classes.wrapper}>
-            <Searcher search={searchInput} setSearch={setSearchInput}/>
-            <ProductList products={getFilteredProducts()}/>
+        <div className={`${classes.wrapper} container`}>
+            <Searcher search={searchInput} setSearch={setSearchInput} customClasses={classes.searcher}/>
+            <ProductList products={getFilteredData()}/>
         </div>
     );
 }

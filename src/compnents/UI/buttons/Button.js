@@ -1,5 +1,7 @@
-const Button = ({children,fc}) => {
-  return <button onClick={fc}>{children}</button>
+import React from "react";
+
+const Button = ({children,fc,customClasses}) => {
+  return <button onClick={fc} className={customClasses}>{children}</button>
 };
 
 export default Button;
