@@ -1,37 +1,31 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from "react";
 import {useDataState} from "../../compnents/specific/functions/useDataState";
 import Searcher from "../../compnents/universal/UI/searcher/Searcher";
-import classes from './ProductPage.module.css';
 import {ContentList} from "../../compnents/universal/other/contentList/ContentList";
+import classes from "./TodosPage.module.css";
 
-const ProductPage = () => {
+const TodosPage = () => {
     const {searchInput, setSearchInput, loadingStatus, data} = useDataState(
-        'https://fakestoreapi.com/products',
+        'https://jsonplaceholder.typicode.com/todos',
         'title',
-        data => data
+        data => data,
     );
 
-    const [basked,setBasked] = useState([]);
-
-    const addToBasket = (item) => {
-        const isItemBasked = basked.some(baskedItem => baskedItem === item);
-        if (!isItemBasked){
-            setBasked(prev => [...prev, item]);
-        }
+    const todoStatus = (item,setNewItem) => {
+        setNewItem ({...item, completed: !item.completed})
     }
 
     const contentConfig = {
-        mapper:{
-            image: '',
-            title: 'Name:',
-            price: 'Price:'
+        mapper: {
+            title: 'Todo:',
+            completed: 'Completed:'
         },
         functions: [
             {
-                onClick: addToBasket,
-                label: '+',
-                className: ''
-            }
+                onClick: todoStatus,
+                label: 'click',
+                className: '',
+            },
         ],
         classes: {
             list: classes.itemList,
@@ -46,16 +40,15 @@ const ProductPage = () => {
                 setSearch={setSearchInput}
                 customClasses={classes.searcher}
             />
-
             <ContentList
                 data={data}
                 contentConfig={contentConfig}
                 loading={loadingStatus}
-                customClasses={classes.itemList}
+                customClasses={contentConfig.classes.list}
                 contentType={'products'}
             />
         </div>
     );
 };
 
-export default ProductPage;
+export default TodosPage;

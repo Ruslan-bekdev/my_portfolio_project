@@ -3,3 +3,8 @@
     margin: 0 auto;
     text-align: center;
 }
+.imageDefault {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
