@@ -1,15 +1,14 @@
 import React from 'react';
 import classes from './Header.module.css';
+import Navigation from "../../other/navigation/Navigation";
+import {PATHS} from "../../../../App";
 
 const Header = () => {
+
     return (
         <header className={classes.header}>
             <div className="container">
-                <div className={classes.header__links}>
-                    <a href="/">Главная</a>
-                    <a href="/products">Products</a>
-                    <a href="/comments">Comments</a>
-                </div>
+                <Navigation pageConfig={PATHS}/>
             </div>
         </header>
     );

@@ -3,9 +3,10 @@ import {useDataState} from "../../compnents/specific/functions/useDataState";
 import Searcher from "../../compnents/universal/UI/searcher/Searcher";
 import classes from './ProductPage.module.css';
 import {ContentList} from "../../compnents/universal/other/contentList/ContentList";
+import {Outlet, useNavigate} from "react-router-dom";
 
 const ProductPage = () => {
-    const {searchInput, setSearchInput, loadingStatus, data} = useDataState(
+    const {searchValue, setSearchValue, isLoading, data} = useDataState(
         'https://fakestoreapi.com/products',
         'title',
         data => data
@@ -19,8 +20,13 @@ const ProductPage = () => {
             setBasked(prev => [...prev, item]);
         }
     }
+    const navigate = useNavigate();
+    const showProduct = (item) => {
+        navigate(`/products/${item.id}`);
+    }
 
     const contentConfig = {
+        notFoundMessage:'Товары не найдены',
         mapper:{
             image: '',
             title: 'Name:',
@@ -31,28 +37,32 @@ const ProductPage = () => {
                 onClick: addToBasket,
                 label: '+',
                 className: ''
+            },
+            {
+                onClick: showProduct,
+                label: 'show',
+                className: ''
             }
         ],
         classes: {
-            list: classes.itemList,
             item: classes.itemList__item,
         }
     };
 
     return (
         <div className={`${classes.wrapper} container`}>
+            <Outlet/>
             <Searcher
-                search={searchInput}
-                setSearch={setSearchInput}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
                 customClasses={classes.searcher}
             />
 
             <ContentList
                 data={data}
                 contentConfig={contentConfig}
-                loading={loadingStatus}
+                isLoading={isLoading}
                 customClasses={classes.itemList}
-                contentType={'products'}
             />
         </div>
     );

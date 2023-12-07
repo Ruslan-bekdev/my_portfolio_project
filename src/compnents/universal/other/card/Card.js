@@ -3,7 +3,7 @@ import Button from "../../UI/buttons/Button";
 import Image from "../../UI/image/Image";
 
 const Card = ({item,contentConfig,customClasses}) => {
-    const {mapper,functions,classes} = contentConfig;
+    const {mapper,functions} = contentConfig;
     const [newItem,setNewItem] = useState(item);
 
     const isImageLink = (string) => {
@@ -22,7 +22,7 @@ const Card = ({item,contentConfig,customClasses}) => {
     const renderControls = () => {
         let buttons;
         buttons = functions.map((func,index) => (
-            <Button fc={()=>func.onClick(newItem,setNewItem)} customClasses={func.className} key={index}>
+            <Button func={()=>func.onClick(newItem,setNewItem)} customClasses={func.className} key={index}>
                 {func.label}
             </Button>
         ));

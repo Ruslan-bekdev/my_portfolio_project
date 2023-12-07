@@ -1,30 +1,63 @@
 import './App.css';
-import {Route,Routes} from "react-router-dom";
-import ProductPage from "./pages/productPage/ProductPage";
-import TodosPage from "./pages/todosPage/TodosPage";
-import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
+import React from "react";
+import {Route, Routes} from "react-router-dom";
 import Header from "./compnents/specific/layout/header/Header";
-import MainPage from "./pages/mainPage/MainPage";
+import Footer from "./compnents/specific/layout/footer/Footer";
+import {
+    MainPage,
+    ProductPage,
+    TodosPage,
+    ClassPage,
+    NotFoundPage,
+} from './pages/index';
+
+export const PATHS = {
+    main:{
+        path:'/',
+        element:<MainPage/>,
+        title:'Главная',
+    },
+    products:{
+        path:'/products/',
+        element:<ProductPage/>,
+        title:'Products',
+    },
+    todos:{
+        path:'/todos',
+        element:<TodosPage/>,
+        title:'Todos',
+    },
+    class:{
+        path:'/class',
+        element:<ClassPage/>,
+        title:'Class',
+    },
+    notFound:{
+        path:'*',
+        element:<NotFoundPage/>,
+        title:'',
+    }
+}
+
+const RenderPages = () => {
+    return <Routes>
+        {
+            Object.entries(PATHS).map(([key, value], index) => {
+                const {path, element} = value;
+                return <Route key={key} path={path} element={element}/>
+            })
+        }
+    </Routes>
+}
 
 const App = () => {
     return(
-        <div className='App'>
-            {/*надо разобраться со стилями, перенести часть*/}
-            {/*к компонентам и так далее.*/}
-
-            {/*нужно закончить функционал todoStatus*/}
-            {/*сделать какой то ключ нового айтема как в контент или фанкшнс*/}
-            {/*Если он есть, то айтем заменяется им.*/}
-            {/*Также нужно исправить все названия, улучшить код*/}
-            {/*и обьединить фанкшнс и контент. Кароче улучшить код*/}
-
+        <div>
             <Header/>
-            <Routes>
-                <Route path={'/'} element={<MainPage/>}/>
-                <Route path={'products'} element={<ProductPage/>}/>
-                <Route path={'comments'} element={<TodosPage/>}/>
-                <Route path={'*'} element={<NotFoundPage/>}/>
-            </Routes>
+            <div className='wrapper'>
+                <RenderPages/>
+            </div>
+            <Footer/>
         </div>
     )
 }
