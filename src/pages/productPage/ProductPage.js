@@ -1,32 +1,64 @@
 import React, {useState} from 'react';
-import {useDataState} from "../../compnents/specific/functions/useDataState";
-import Searcher from "../../compnents/universal/UI/searcher/Searcher";
 import classes from './ProductPage.module.css';
+import Input from "../../compnents/universal/UI/input/Input";
 import {ContentList} from "../../compnents/universal/other/contentList/ContentList";
+import {useDataState} from "../../compnents/specific/functions/useDataState";
 import {Outlet, useNavigate} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {
+    setInitialProductsAction,
+    setProductsAction,
+    setProductsErrorAction,
+    setProductsLoadingStatusAction,
+    setProductsSearchValueAction,
+} from "../../redux/actions/actions";
 
 const ProductPage = () => {
-    const {searchValue, setSearchValue, isLoading, data} = useDataState(
-        'https://fakestoreapi.com/products',
-        'title',
-        data => data
-    );
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
+    const {initialProducts,products,searchValue,isLoading} = useSelector(state=>state.productsReducer);
     const [basked,setBasked] = useState([]);
 
-    const addToBasket = (item) => {
-        const isItemBasked = basked.some(baskedItem => baskedItem === item);
-        if (!isItemBasked){
-            setBasked(prev => [...prev, item]);
-        }
+    const handleSearch = (value) => {
+        dispatch(setProductsSearchValueAction(value))
     }
-    const navigate = useNavigate();
-    const showProduct = (item) => {
-        navigate(`/products/${item.id}`);
+    const showProduct = (product) => {
+        navigate(`/products/${product.id}`);
+    }
+    const addToBasket = (product) => {
+        const isItemBasked = basked.some(baskedItem => baskedItem === product);
+        if (!isItemBasked){
+            setBasked(prev => [...prev, product]);
+        }
+        console.log(basked);
     }
 
+    const requestConfig = {
+        requestParams:{
+            url: 'https://fakestoreapi.com/products',
+            options: {},
+            method: 'axios',
+        },
+        actions:{
+            setInitialDataAction: setInitialProductsAction,
+            setDataAction: setProductsAction,
+            setLoadingStatusAction: setProductsLoadingStatusAction,
+            setErrorAction: setProductsErrorAction,
+        },
+        selectors:{
+            initialData: initialProducts,
+            searchValue: searchValue,
+            isLoading: isLoading,
+        },
+        searchingKey: 'title',
+        transformData: null,
+    }
     const contentConfig = {
+        data: products,
         notFoundMessage:'Товары не найдены',
+        isLoading,
+        // loadingValue: ,
         mapper:{
             image: '',
             title: 'Name:',
@@ -45,25 +77,24 @@ const ProductPage = () => {
             }
         ],
         classes: {
+            body: classes.itemList,
             item: classes.itemList__item,
+            image: classes.item__image,
         }
     };
 
+    useDataState(requestConfig,dispatch)
+
     return (
         <div className={`${classes.wrapper} container`}>
+            <h1>Продукты</h1>
             <Outlet/>
-            <Searcher
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
+            <Input
+                value={searchValue}
+                setValue={handleSearch}
                 customClasses={classes.searcher}
             />
-
-            <ContentList
-                data={data}
-                contentConfig={contentConfig}
-                isLoading={isLoading}
-                customClasses={classes.itemList}
-            />
+            <ContentList config={contentConfig}/>
         </div>
     );
 };

@@ -1,51 +1,46 @@
 import {useState, useEffect} from 'react';
 import {useFetch,useAxios} from '../../universal/functions/requests';
 
-export const useDataState = (url,searchingKey,transformData,options={},requestMethod = 'fetch') => {
-    const [initialData, setInitialData] = useState([]);
-    const [data, setData] = useState([]);
-    const [searchValue, setSearchValue] = useState('');
-    const [isLoading, setIsLoading] = useState(true);
+export const useDataState = (config, dispatch) => {
     const [fetchError, setFetchError] = useState('');
+    const {selectors, actions, requestParams, transformData, searchingKey} = config;
 
-    const fetchData = ()=>{
-        const requestFunction =
-            requestMethod === 'fetch'.toLowerCase()
-                ?useFetch :useAxios;
+    const fetchData = () => {
+        if (!config.selectors.initialData.length){
+            const requestFunction = {
+                fetch: useFetch,
+                axios: useAxios,
+            }
 
-        requestFunction(url,options)
-            .then(({status, data, error}) => {
-                if (status !== 200) return setFetchError(error);
-                const modifiedData = transformData(data);
-                setInitialData(modifiedData);
-            })
-            .finally(() => {
-                setIsLoading(false);
-            });
+            requestFunction[requestParams.method](requestParams.url,requestParams.options)
+                .then(({status, data, error}) => {
+                    if (status !== 200) return setFetchError(error);
+                    const modifiedData = transformData
+                        ?transformData(data)
+                        :data;
+                    console.log(modifiedData)
+                    dispatch(actions.setInitialDataAction(modifiedData));
+                })
+                .finally(() => {
+                    dispatch(actions.setLoadingStatusAction(false))
+                });
+        }
     };
+    const getFilteredData = () => {
+        let newData = searchingKey
+            ?selectors.initialData.filter(item =>
+                item[searchingKey].includes(selectors.searchValue.trim()))
+            :selectors.initialData
+        dispatch(actions.setDataAction(newData))
+    }
 
     useEffect(() => {
         fetchData();
-        getFilteredData()
     }, []);
-
+    useEffect(() => {
+        getFilteredData();
+    }, [selectors.searchValue,selectors.initialData]);
     useEffect(() => {
         fetchError && alert(fetchError);
     }, [fetchError]);
-
-    useEffect(() => {
-        getFilteredData();
-    }, [searchValue,initialData]);
-
-    const getFilteredData = () => {
-        let newData;
-        isLoading
-            ?newData = []
-            :newData = initialData.filter(item =>
-                item[searchingKey].includes(searchValue.trim())
-            );
-        setData(newData);
-    }
-
-    return {searchValue, setSearchValue, isLoading, data};
 };

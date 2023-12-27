@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import Button from "../../UI/buttons/Button";
 import Image from "../../UI/image/Image";
 
-const Card = ({item,contentConfig,customClasses}) => {
-    const {mapper,functions} = contentConfig;
+const Card = ({item,config}) => {
+    const {mapper,functions,classes} = config;
     const [newItem,setNewItem] = useState(item);
 
     const isImageLink = (string) => {
@@ -14,7 +14,7 @@ const Card = ({item,contentConfig,customClasses}) => {
         return Object.entries(mapper).map(([key, value], index) => {
             const itemKeyValue = newItem[key];
             return isImageLink(itemKeyValue)
-                ? <Image src={itemKeyValue}/>
+                ? <Image customClasses={classes.image} src={itemKeyValue}/>
                 : <div>{`${value} ${itemKeyValue}`}<br/></div>
         });
     };
@@ -30,7 +30,7 @@ const Card = ({item,contentConfig,customClasses}) => {
     };
 
     return (
-        <div className={customClasses}>
+        <div className={classes.item}>
             {renderContent()}
             {renderControls()}
         </div>

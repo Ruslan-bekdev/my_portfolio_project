@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SingleProduct = ({item}) => {
+const SingleProduct = ({product}) => {
     return (
         <div className='container'>
-            это страница Product с id = {item.id}
+            это страница Product с id = {product.id}
             (в разработке...)
         </div>
     );

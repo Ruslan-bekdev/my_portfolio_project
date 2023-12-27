@@ -34,11 +34,12 @@ class ClassPage extends Component {
         const {textVisible} = this.state;
         return (
             <div className='container'>
+                <h1>Страница из классового компонента</h1>
                 <Button
                     func={this.toggleTextVisibility}
                     children={textVisible ? 'Скрыть текст' : 'Показать текст'}
                 />
-                {textVisible && <p>Рендеринг остановится когда число ниже дайдет до 10</p>}
+                {textVisible && <p>Рендеринг остановится когда число ниже дойдет до 10</p>}
                 <Wall value={'='} count={'10'}/>
                 <p>{this.state.count}</p>
                 <Button

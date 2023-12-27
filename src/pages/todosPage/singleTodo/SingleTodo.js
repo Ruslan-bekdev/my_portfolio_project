@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SingleTodo = ({item}) => {
+const SingleTodo = ({todo}) => {
     return (
         <div className='container'>
-            это страница Todo с id = {item.id}
+            это страница Todo с id = {todo.id}
             (в разработке...)
         </div>
     );

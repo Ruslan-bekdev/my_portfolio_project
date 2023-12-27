@@ -1,0 +1,7 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+.spinner{
+    margin-right: 8px;
+}

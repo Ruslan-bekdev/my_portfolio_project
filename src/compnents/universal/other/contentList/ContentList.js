@@ -1,29 +1,29 @@
 import React from "react";
 import Card from "../card/Card";
 import DataUnavailablePlaceholder from "../dataUnavailablePlaceholder/DataUnavailablePlaceholder";
+import LoadingSpinner from "../loadingSpinner/LoadingSpinner";
 
-export const ContentList = ({data,isLoading,customClasses = '',contentConfig}) => {
+export const ContentList = ({config}) => {
+    const {
+        data,notFoundMessage,isLoading,loadingValue,
+        mapper,functions,classes
+    } = config;
     let listContent;
 
     if (isLoading){
-        listContent = <p>Загрузка...</p>;
+        listContent = <LoadingSpinner value={loadingValue && loadingValue}/>;
     } else if (!data.length){
-        listContent = <p>{contentConfig.notFoundMessage}</p>||<p>Комментарии не найдены</p>;
+        listContent = <p>{notFoundMessage || 'Данные не найдены'}</p>;
     } else if (typeof data[0] !== "object"){
         listContent = <DataUnavailablePlaceholder/>
-        console.log('iem is not Object');
+        console.log('Ошибка: Данные не являются объектами');
     } else{
         listContent = data.map((item, index) => (
             <Card
-                item={item} contentConfig={contentConfig}
-                customClasses={contentConfig.classes.item} key={index}
+                item={item} config={config} key={item.id||index}
             />
         ));
     }
 
-    return(
-        <div className={customClasses}>
-            {listContent}
-        </div>
-    )
+    return <div className={classes.body}>{listContent}</div>
 };

@@ -7,25 +7,37 @@ import {
     MainPage,
     ProductPage,
     TodosPage,
+    UsersPage,
+    AddUserPage,
     ClassPage,
     NotFoundPage,
 } from './pages/index';
 
-export const PATHS = {
+export const pagesConfig = {
     main:{
         path:'/',
         element:<MainPage/>,
-        title:'Главная',
+        title:'Main',
     },
     products:{
         path:'/products/',
         element:<ProductPage/>,
         title:'Products',
     },
-    todos:{
-        path:'/todos',
-        element:<TodosPage/>,
-        title:'Todos',
+    todos: {
+        path: '/todos',
+        element: <TodosPage/>,
+        title: 'Todos',
+    },
+    users: {
+        path: '/users',
+        element: <UsersPage/>,
+        title: 'Users',
+    },
+    addUser: {
+        path: '/addUser',
+        element: <AddUserPage/>,
+        title: 'Add user',
     },
     class:{
         path:'/class',
@@ -42,7 +54,7 @@ export const PATHS = {
 const RenderPages = () => {
     return <Routes>
         {
-            Object.entries(PATHS).map(([key, value], index) => {
+            Object.entries(pagesConfig).map(([key, value], index) => {
                 const {path, element} = value;
                 return <Route key={key} path={path} element={element}/>
             })
