@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+.link{
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s, font-size 0.2s;
+}
+.link+.link{
+    margin-left: 10px;
+}
+.link:hover{
+    font-size: 1.1em;
+    color: red;
+    text-decoration: underline red 1px;
+}
+.active{
+    pointer-events: none;
+    opacity: 0.3;
+}

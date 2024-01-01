@@ -1,0 +1,13 @@
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+}
+.wrapper{
+    padding-top: 50px;
+}
+.imageDefault {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}

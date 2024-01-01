@@ -1,0 +1,9 @@
+.header{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    position: fixed;
+}
