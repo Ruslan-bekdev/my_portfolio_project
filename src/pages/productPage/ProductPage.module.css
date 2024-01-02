@@ -1,32 +1,34 @@
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 20px;
 }
-.searcher{
-    margin: 40px auto;
+
+.searcher {
+    margin: 20px auto;
 }
-.searcher>input{
-    width: 250px;
+.searcher > input {
+    width: 200px;
     padding: 5px;
 }
-.itemList{
+
+.itemList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.itemList__item{
+.itemList__item {
     width: 250px;
-    margin: 30px auto;
+    margin: 20px auto;
 }
-.item__image{
-    height: 300px;
+.item__image {
+    height: 250px;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.item__image>img{
+.item__image > img {
     width: auto;
     height: auto;
     max-width: 100%;

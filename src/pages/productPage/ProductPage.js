@@ -1,37 +1,38 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './ProductPage.module.css';
 import Input from "../../compnents/universal/UI/input/Input";
 import {ContentList} from "../../compnents/universal/other/contentList/ContentList";
 import {useDataState} from "../../compnents/specific/functions/useDataState";
 import {Outlet, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+import {pagesConfig} from "../../App";
 import {
     setInitialProductsAction,
     setProductsAction,
+    setSelectedProductAction,
     setProductsErrorAction,
+    addProductToBuskedAction,
     setProductsLoadingStatusAction,
     setProductsSearchValueAction,
-} from "../../redux/actions/actions";
+} from "../../store/productsSlice";
 
 const ProductPage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const {initialProducts,products,searchValue,isLoading} = useSelector(state=>state.productsReducer);
-    const [basked,setBasked] = useState([]);
+    const {initialProducts,products,basked,searchValue,isLoading} = useSelector(state=>state.productsReducer);
 
     const handleSearch = (value) => {
-        dispatch(setProductsSearchValueAction(value))
-    }
-    const showProduct = (product) => {
-        navigate(`/products/${product.id}`);
-    }
+        dispatch(setProductsSearchValueAction(value));
+    };
+    const selectProduct = (product) => {
+        dispatch(setSelectedProductAction(product));
+        navigate(pagesConfig.products.path + '/' + product.id);
+    };
     const addToBasket = (product) => {
-        const isItemBasked = basked.some(baskedItem => baskedItem === product);
-        if (!isItemBasked){
-            setBasked(prev => [...prev, product]);
-        }
-        console.log(basked);
+        const isItemBasked = basked.some(baskedItem => baskedItem.id === product.id);
+        if (!isItemBasked)
+            dispatch(addProductToBuskedAction(product));
     }
 
     const requestConfig = {
@@ -71,7 +72,7 @@ const ProductPage = () => {
                 className: ''
             },
             {
-                onClick: showProduct,
+                onClick: selectProduct,
                 label: 'show',
                 className: ''
             }
@@ -88,13 +89,17 @@ const ProductPage = () => {
     return (
         <div className={`${classes.wrapper} container`}>
             <h1>Продукты</h1>
-            <Outlet/>
             <Input
                 value={searchValue}
+                placeholder='Поиск'
                 setValue={handleSearch}
                 customClasses={classes.searcher}
             />
+            <div>
+                <p>Корзина({basked.length})</p>
+            </div>
             <ContentList config={contentConfig}/>
+            <Outlet/>
         </div>
     );
 };

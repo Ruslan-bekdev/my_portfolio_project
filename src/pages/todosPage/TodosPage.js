@@ -12,24 +12,20 @@ import {
     setTodosErrorAction,
     setTodosLoadingStatusAction,
     setTodosSearchValueAction,
-} from "../../redux/actions/actions";
+} from "../../store/todosSlice";
 
 const TodosPage = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
-    const {initialTodos,todos,searchValue,isLoading} = useSelector(state=>state.todosReducer)
+    const {initialTodos,todos,searchValue,isLoading} = useSelector(state=>state.todosReducer);
     const [todoTitle,setTodoTitle] = useState('');
 
     const handleSearch = (value) => {
-        dispatch(setTodosSearchValueAction(value))
-    }
+        dispatch(setTodosSearchValueAction(value));
+    };
     const handleTodoStatus = (todo,setNewTodo) => {
-        setNewTodo ({...todo, completed: !todo.completed})
-    }
-    const showTodo = (todo) => {
-        navigate(`/todos/${todo.id}`);
-    }
+        setNewTodo ({...todo, completed: !todo.completed});
+    };
     const addTodo = (e) => {
         e.preventDefault();
         const newTodo = {
@@ -85,11 +81,6 @@ const TodosPage = () => {
                 label: 'Изменить статус',
                 className: '',
             },
-            {
-                onClick: showTodo,
-                label: 'Показать',
-                className: ''
-            }
         ],
         classes: {
             body: '',

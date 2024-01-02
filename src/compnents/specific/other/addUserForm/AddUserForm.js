@@ -1,22 +1,15 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {setUsersAction} from '../../../../redux/actions/actions';
-
-class User {
-    constructor(id = '',name = '',username = '',email = '',phone = '',address={city:'',street:''}){
-        this.id = id;
-        this.name = name;
-        this.username = username;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
-    }
-}
+import {addUserAction} from '../../../../store/usersSlice';
 
 const AddUserForm = () => {
     const dispatch = useDispatch();
-    const initialUsers = useSelector(state=>state.usersReducer.initialUsers);
-    const [newUser, setNewUser] = useState(new User());
+    const {initialUsers} = useSelector(state=>state.usersReducer);
+    const initialUser = {
+        id:'',name:'',username:'',email:'',
+        phone:'',address:{city:'',street:''}
+    };
+    const [newUser, setNewUser] = useState(initialUser);
 
     const handleInputChange = (e) => {
         const {name,value} = e.target;
@@ -39,14 +32,25 @@ const AddUserForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!newUser.name || !newUser.username || !newUser.email || !newUser.phone) {
+            return alert('Все обязательные поля должны быть заполнены!');
+        }
+
+        const updatedAddress = {
+            city: newUser.address.city || 'Данных нет',
+            street: newUser.address.street || 'Данных нет',
+        };
+
         const updatedUser = {
             ...newUser,
-            id: initialUsers.length+1,
+            address: updatedAddress,
+            id: initialUsers.length + 1,
         };
-        dispatch(setUsersAction([...initialUsers,updatedUser]));
 
-        setNewUser(new User());
+        dispatch(addUserAction(updatedUser));
+        setNewUser(initialUser);
     };
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -63,7 +67,7 @@ const AddUserForm = () => {
             <div>
                 <input value={newUser.phone} onChange={handleInputChange} placeholder='Номер телефона' type='text' name="phone"/>
             </div>
-                <spun>необязательно:</spun>
+            <spun>необязательно:</spun>
             <div>
                 <input value={newUser.address.city} onChange={handleAddressChange} placeholder='Город' type='text' name="city"/>
             </div>

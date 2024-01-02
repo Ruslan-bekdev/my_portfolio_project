@@ -1,18 +1,18 @@
 import React from 'react';
-import classes from "../todosPage/TodosPage.module.css";
+import classes from './UsersPage.module.css';
 import {useDispatch, useSelector} from "react-redux";
 import {Outlet, useNavigate} from "react-router-dom";
 import {useDataState} from "../../compnents/specific/functions/useDataState";
 import TableContent from "../../compnents/universal/other/contentTable/ContentTable";
-import Input from "../../compnents/universal/UI/input/Input";
-import Button from "../../compnents/universal/UI/buttons/Button";
 import AddUserForm from "../../compnents/specific/other/addUserForm/AddUserForm";
+import {pagesConfig} from "../../App";
 import {
     setInitialUsersAction,
     setUsersAction,
+    setSelectedUserAction,
     setUsersLoadingStatusAction,
     setUsersErrorAction,
-} from "../../redux/actions/actions";
+} from "../../store/usersSlice";
 
 const UsersPage = () => {
     const dispatch = useDispatch();
@@ -21,7 +21,8 @@ const UsersPage = () => {
     const {initialUsers,users,isLoading} = useSelector(state => state.usersReducer)
 
     const showUser = (user) => {
-        navigate(`/users/${user.id}`);
+        dispatch(setSelectedUserAction(user));
+        navigate(pagesConfig.users.path + '/' + user.id);
     }
     const deleteKey = (data) => {
         return data.map(user => {
@@ -30,8 +31,6 @@ const UsersPage = () => {
             return rest;
         })
     }
-
-    setInterval(()=>console.log(users),5000)
 
     const requestConfig = {
         requestParams:{
@@ -66,11 +65,12 @@ const UsersPage = () => {
             {
                 onClick: showUser,
                 label: 'Подробнее',
+                header: 'Actions',
             }
         ],
         classes: {
             body: '',
-            item: classes.itemList__item,
+            item: '',
         }
     };
 

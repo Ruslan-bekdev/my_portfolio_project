@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link as RouterLink} from "react-router-dom";
 
-const Link = ({url, children, customCLasses = ''}) => {
+const Link = ({url, children, customClasses = ''}) => {
     return (
-        <Link to={url} className={customCLasses}>{children}</Link>
+        <RouterLink to={url} className={customClasses}>{children}</RouterLink>
     );
 };
 

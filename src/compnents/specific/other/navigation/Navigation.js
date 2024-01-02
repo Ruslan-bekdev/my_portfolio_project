@@ -6,20 +6,19 @@ const Navigation = ({pageConfig}) => {
     const location = useLocation();
     return (
         <div className={classes.wrapper}>
-            {
-                Object.entries(pageConfig).map(([key, value], index) => {
-                    const {path,title} = value;
-                    const isActive = location.pathname === path ?classes.active :'';
-                    return title &&
-                        <NavLink
-                            to={path}
-                            className={`${classes.link} ${isActive}`}
-                            key={`${key}${index}`}
-                        >
-                            {title}
-                        </NavLink>
-                })
-            }
+            {Object.entries(pageConfig).map(([key, value], index) => {
+                const {path,title} = value;
+                const isActive = location.pathname === path ?classes.active :'';
+                return title
+                    ?<NavLink
+                        to={path}
+                        className={`${classes.link} ${isActive}`}
+                        key={key+index}
+                    >
+                        {title}
+                    </NavLink>
+                    :null
+            })}
         </div>
     );
 };

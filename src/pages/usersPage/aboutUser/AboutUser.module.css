@@ -1,0 +1,22 @@
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    z-index: 998;
+}
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*width: 80%;*/
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 999;
+}

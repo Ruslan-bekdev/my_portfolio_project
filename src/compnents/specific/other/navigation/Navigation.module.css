@@ -3,7 +3,7 @@
     align-items: center;
 }
 .link{
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     transition: color 0.2s, font-size 0.2s;
 }

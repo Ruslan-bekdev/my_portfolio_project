@@ -8,9 +8,11 @@ import {
     ProductPage,
     TodosPage,
     UsersPage,
-    AddUserPage,
     ClassPage,
     NotFoundPage,
+
+    AboutUser,
+    AboutProduct,
 } from './pages/index';
 
 export const pagesConfig = {
@@ -20,9 +22,13 @@ export const pagesConfig = {
         title:'Main',
     },
     products:{
-        path:'/products/',
+        path:'/products',
         element:<ProductPage/>,
         title:'Products',
+        child: {
+            path: ':id',
+            element: <AboutProduct/>
+        },
     },
     todos: {
         path: '/todos',
@@ -33,11 +39,10 @@ export const pagesConfig = {
         path: '/users',
         element: <UsersPage/>,
         title: 'Users',
-    },
-    addUser: {
-        path: '/addUser',
-        element: <AddUserPage/>,
-        title: 'Add user',
+        child: {
+            path: ':id',
+            element: <AboutUser/>,
+        },
     },
     class:{
         path:'/class',
@@ -51,23 +56,27 @@ export const pagesConfig = {
     }
 }
 
-const RenderPages = () => {
-    return <Routes>
-        {
-            Object.entries(pagesConfig).map(([key, value], index) => {
-                const {path, element} = value;
-                return <Route key={key} path={path} element={element}/>
-            })
-        }
-    </Routes>
-}
+const RenderRoutes = () => {
+    return (
+        <Routes>
+            {Object.entries(pagesConfig).map(([key, value]) => {
+                const { path, element, child } = value;
+                return (
+                    <Route key={key} path={path} element={element}>
+                        {child && <Route path={child.path} element={child.element} />}
+                    </Route>
+                );
+            })}
+        </Routes>
+    );
+};
 
 const App = () => {
     return(
         <div>
             <Header/>
             <div className='wrapper'>
-                <RenderPages/>
+                <RenderRoutes/>
             </div>
             <Footer/>
         </div>

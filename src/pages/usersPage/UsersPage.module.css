@@ -1,0 +1,24 @@
+/* TableContent.module.css */
+
+.wrapper {
+    margin-top: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper table {
+    width: 80%; /* Измените ширину таблицы по вашему усмотрению */
+    border-collapse: collapse;
+}
+
+.wrapper th,
+.wrapper td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.wrapper th {
+    background-color: #f2f2f2;
+}

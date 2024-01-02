@@ -4,12 +4,7 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
-import {createStore,applyMiddleware} from "redux";
-import {logger} from "redux-logger/src";
-import {thunk} from "redux-thunk";
-import {rootReducer} from "./redux/reducers";
-
-const store = createStore(rootReducer, applyMiddleware(thunk,logger));
+import {store} from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
