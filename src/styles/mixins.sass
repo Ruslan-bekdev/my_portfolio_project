@@ -1,0 +1,87 @@
+@import "src/styles/variables"
+
+//флекс центрирование
+@mixin justify-center-around
+  display: flex
+  align-items: center
+  justify-content: space-around
+
+@mixin justify-center-between
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+@mixin flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin flex-center-column
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@mixin flex-center-column-nowrap
+  display: flex
+  flex-direction: column
+  align-items: center
+  flex-wrap: nowrap
+
+//позиционное центрирование
+@mixin center-relative
+  position: relative
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin center-absolute
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin center-fixed
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin start-relative
+  position: relative
+  top: 0
+  left: 0
+
+@mixin start-absolute
+  position: absolute
+  top: 0
+  left: 0
+
+@mixin start-fixed
+  position: absolute
+  top: 0
+  left: 0
+
+//градиент
+@mixin gradient($color1, $color2)
+  background-image: linear-gradient($color1, $color2)
+
+//анимация
+@mixin animation($name, $duration, $timing-function, $iteration-count)
+  animation-name: $name
+  animation-duration: $duration
+  animation-timing-function: $timing-function
+  animation-iteration-count: $iteration-count
+
+//миксин для создания карточки с тенью и радиусом скругления
+@mixin card-style
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  border-radius: 8px
+  padding: $base-padding
+  margin: $base-margin
+
+//дефолтные стили
+@mixin imageDefault
+  width: auto
+  height: auto
+  max-width: 100%
+  max-height: 100%

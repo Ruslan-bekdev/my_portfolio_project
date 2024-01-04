@@ -1,0 +1,50 @@
+@import "src/styles/mixins"
+@import "src/styles/variables"
+
+.main
+  .landing
+    height: $section-vh
+    @include justify-center-between
+    padding: 40px
+    box-sizing: border-box
+
+    &_block
+      &__text
+        text-align: start
+
+        h1,p
+          margin: 0
+          max-width: 500px
+
+        p
+          margin: 20px 0
+
+        .skills
+          &__title
+            font-weight: bold
+
+          hr
+            margin: 5px
+            color: $secondary_light
+
+          &__images
+            margin-top: 10px
+
+            img
+              transition: transform 0.2s ease-in-out
+            img:not(:last-child)
+              margin-right: 16px
+            img:hover
+              transform: scale(1.1)
+
+      &__image
+        width: auto
+        height: auto
+        max-width: 400px
+        max-height: 350px
+        border-radius: 8px
+
+        img
+          @include imageDefault
+          border-radius: 8px
+          object-fit: contain

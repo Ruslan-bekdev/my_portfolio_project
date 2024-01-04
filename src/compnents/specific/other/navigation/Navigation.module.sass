@@ -1,0 +1,28 @@
+@import "src/styles/mixins"
+@import "src/styles/variables"
+
+@keyframes enlarge
+  from
+    font-size: 1em
+  to
+    text-decoration: underline $main-light
+    font-size: 1.1em
+
+.wrapper
+  display: flex
+  align-items: center
+
+  .link
+    font-weight: bold
+    text-decoration: none
+    transition: 3s
+
+    & + .link
+      margin-left: 10px
+
+    &:hover
+      animation: enlarge 0.2s forwards
+
+.active
+  pointer-events: none
+  opacity: 0.3

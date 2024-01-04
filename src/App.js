@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.sass';
+import React from "react";
+import {Route, Routes} from "react-router-dom";
+import {pagesConfig} from "./pages";
+import Header from "./compnents/specific/layout/header/Header";
 
 function App() {
+    const RenderRoutes = () => {
+        return (
+            <Routes>
+                {Object.entries(pagesConfig).map(([key, value]) => {
+                    const {path, element, child} = value;
+                    return (
+                        <Route key={key} path={path} element={element}>
+                            {child && <Route path={child.path} element={child.element} />}
+                        </Route>
+                    );
+                })}
+            </Routes>
+        );
+    };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header/>
+        <div className="content">
+            <RenderRoutes/>
+        </div>
     </div>
   );
 }
