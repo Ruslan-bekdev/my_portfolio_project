@@ -4,9 +4,17 @@ import myPhoto from '../../../assets/images/img.png'
 import {Tooltip} from "@mui/material";
 import ImageModal from "../../../compnents/universal/other/imageModal/ImageModal";
 
-const RenderIcons = ({icons}) => (
+const iconsSet = [
+    {icons: 'html,css,sass', tooltip: 'HTML, CSS, Sass'},
+    {icons: 'js,ts', tooltip: 'JavaScript, TypeScript'},
+    {icons: 'react,redux', tooltip: 'React, Redux Toolkit', divider:true},
+    {icons: 'git,github', tooltip: 'Git, GitHub'},
+    {icons: 'bootstrap,materialui,figma', tooltip: 'Bootstrap, Material UI, Figma'},
+];
+
+const RenderIcons = () => (
     <>
-        {icons.map((icon, index) => (
+        {iconsSet.map((icon, index) => (
             <React.Fragment key={index}>
                 <Tooltip title={icon.tooltip} arrow placement='top'>
                     <img src={`https://skillicons.dev/icons?i=${icon.icons}`} alt={icon.tooltip}/>
@@ -17,14 +25,7 @@ const RenderIcons = ({icons}) => (
     </>
 );
 
-const landing = () => {
-    const iconsSet = [
-        {icons: 'html,css,sass', tooltip: 'HTML, CSS, Sass'},
-        {icons: 'js,ts', tooltip: 'JavaScript, TypeScript'},
-        {icons: 'react,redux', tooltip: 'React, Redux Toolkit', divider:true},
-        {icons: 'git,github', tooltip: 'Git, GitHub'},
-        {icons: 'bootstrap,materialui,figma', tooltip: 'Bootstrap, Material UI, Figma'},
-    ];
+const Landing = () => {
 
     return (
         <div className={`${classes.landing} container`}>
@@ -34,7 +35,7 @@ const landing = () => {
                 <div className={classes.skills}>
                     <span className={classes.skills__title}>Мои навыки:</span> <br/>
                     <div className={classes.skills__images}>
-                        <RenderIcons icons={iconsSet}/>
+                        <RenderIcons/>
                     </div>
                 </div>
             </div>
@@ -43,4 +44,4 @@ const landing = () => {
     );
 };
 
-export default landing;
+export default Landing;

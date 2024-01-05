@@ -1,50 +1,90 @@
 @import "src/styles/mixins"
 @import "src/styles/variables"
 
+.lol
+  background-color: #1C1C22
 .main
-  .landing
-    height: $section-vh
-    @include justify-center-between
-    padding: 40px
+  overflow: auto
+
+.landing
+  @include justify-center-between
+  height: $section-vh
+  box-sizing: border-box
+
+  &_block
+    &__text
+      text-align: start
+
+      h1,p
+        max-width: 500px
+
+      p
+        margin: 20px 0
+
+      .skills
+        &__title
+          font-weight: bold
+
+        hr
+          margin: 5px
+          color: $secondary_light
+
+        &__images
+          margin-top: 10px
+
+          img
+            transition: transform 0.2s ease-in-out
+          img:not(:last-child)
+            margin-right: 16px
+          img:hover
+            transform: scale(1.1)
+
+    &__image
+      width: auto
+      height: auto
+      max-width: 400px
+      max-height: 350px
+      border-radius: 8px
+
+      img
+        @include imageDefault
+        border-radius: 8px
+        object-fit: contain
+
+
+.projects
+  margin-top: 120px
+  &__title
+    margin-bottom: 60px
+  &__wrapper
+    @include flex-center-column
+    background-color: $secondary-dark
+    border-radius: 8px
+  &__tabs
+    padding-top: 20px
+    .tab
+      flex-grow: 1
+      color: $main-light
+
+  &__content
+    @include flex-center
+    height: 350px
+    width: 100%
+    padding: 20px
     box-sizing: border-box
+    .content__wrapper
+      @include justify-center-between
+      height: 100%
+      flex-grow: 1
 
-    &_block
-      &__text
-        text-align: start
-
-        h1,p
-          margin: 0
-          max-width: 500px
-
-        p
-          margin: 20px 0
-
-        .skills
-          &__title
-            font-weight: bold
-
-          hr
-            margin: 5px
-            color: $secondary_light
-
-          &__images
-            margin-top: 10px
-
-            img
-              transition: transform 0.2s ease-in-out
-            img:not(:last-child)
-              margin-right: 16px
-            img:hover
-              transform: scale(1.1)
-
-      &__image
-        width: auto
-        height: auto
-        max-width: 400px
-        max-height: 350px
+  &_block
+    &__image
+      height: 100%
+      >*
         border-radius: 8px
 
-        img
-          @include imageDefault
-          border-radius: 8px
-          object-fit: contain
+    &__text
+      margin-left: 5%
+      text-align: start
+      button
+        background-color: $secondary-dark

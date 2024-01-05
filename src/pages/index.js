@@ -17,7 +17,7 @@ export const anchorsConfig = {
         header:'Обо мне'
     },
     projects:{
-        path:'#projects',
+        path:'#Projects.js',
         header:'Проекты'
     },
     contacts:{
