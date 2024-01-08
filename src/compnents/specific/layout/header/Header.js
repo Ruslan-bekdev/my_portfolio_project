@@ -1,10 +1,9 @@
 import React from 'react';
 import classes from './Header.module.sass';
 import Navigation from "../../other/navigation/Navigation";
-import {anchorsConfig} from "../../../../pages/index";
+import {anchorsConfig} from "../../../../configs/route";
 
 const Header = () => {
-
     return (
         <header className={classes.header}>
             <div className={`${classes.header__content}`}>

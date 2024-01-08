@@ -1,5 +1,7 @@
 $header-height: 60px
 $section-vh: calc(100vh - #{$header-height})
+@function section-vh-plus($number)
+  @return $number + $section-vh + px
 
 //цвета
 $main-dark: #161513
@@ -7,10 +9,11 @@ $secondary-dark: #1C1C22
 $main-light: #E3E0DEFF
 $secondary-light: #B5B5BBFF
 
-
 //размеры
-$base-padding: 20px
-$base-margin: 10px
+$title-margin: 50px
+$sections-margin: 200px
+$block-margin: $title-margin / 2
+$inner-block-margin: $block-margin / 2
 
 //медиа запросы
 $mobile-width: 768px

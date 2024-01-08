@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Navigation.module.sass';
-import {NavLink,useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 
 const Navigation = ({config}) => {
     const location = useLocation();
@@ -10,12 +11,12 @@ const Navigation = ({config}) => {
                 const {path,header} = value;
                 const isActive = location.pathname === path ?classes.active :'';
                 return (
-                    <NavLink
+                    <HashLink smooth
                         to={path} className={`${classes.link}
                         ${isActive}`} key={key+index}
                     >
                         {header}
-                    </NavLink>
+                    </HashLink>
                 )
             })}
         </div>

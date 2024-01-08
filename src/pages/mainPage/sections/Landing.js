@@ -12,26 +12,26 @@ const iconsSet = [
     {icons: 'bootstrap,materialui,figma', tooltip: 'Bootstrap, Material UI, Figma'},
 ];
 
-const RenderIcons = () => (
-    <>
-        {iconsSet.map((icon, index) => (
-            <React.Fragment key={index}>
-                <Tooltip title={icon.tooltip} arrow placement='top'>
-                    <img src={`https://skillicons.dev/icons?i=${icon.icons}`} alt={icon.tooltip}/>
-                </Tooltip>
-                {icon.divider && <hr/>}
-            </React.Fragment>
-        ))}
-    </>
-);
+const Landing = ({id = ''}) => {
 
-const Landing = () => {
+    const RenderIcons = () => (
+        <>
+            {iconsSet.map((icon, index) => (
+                <React.Fragment key={index}>
+                    <Tooltip title={icon.tooltip} arrow placement='top'>
+                        <img src={`https://skillicons.dev/icons?i=${icon.icons}`} alt={icon.tooltip}/>
+                    </Tooltip>
+                    {icon.divider && <hr/>}
+                </React.Fragment>
+            ))}
+        </>
+    );
 
     return (
-        <div className={`${classes.landing} container`}>
+        <div id={id} className={`${classes.landing} container`}>
             <div className={classes.landing_block__text}>
                 <h1>Front-End React Разработчик</h1>
-                <p>Привет! Меня зовут Руслан. Я начинающий Front-End разработчик из Кыргызстана</p>
+                <p>Меня зовут Руслан и я начинающий Front-End разработчик из Кыргызстана</p>
                 <div className={classes.skills}>
                     <span className={classes.skills__title}>Мои навыки:</span> <br/>
                     <div className={classes.skills__images}>

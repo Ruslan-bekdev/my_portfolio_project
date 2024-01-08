@@ -4,8 +4,10 @@
 .lol
   background-color: #1C1C22
 .main
-  overflow: auto
-
+  &__wrapper
+    margin-top: $header-height
+    *[id]
+      scroll-margin-top: $header-height
 .landing
   @include justify-center-between
   height: $section-vh
@@ -52,25 +54,32 @@
         object-fit: contain
 
 
-.projects
-  margin-top: 120px
+.about
+  margin-top: $sections-margin
   &__title
-    margin-bottom: 60px
+    margin-bottom: $title-margin
+
+
+.projects
+  margin-top: $sections-margin
+  &__title
+    margin-bottom: $title-margin
   &__wrapper
     @include flex-center-column
     background-color: $secondary-dark
     border-radius: 8px
+
   &__tabs
-    padding-top: 20px
+    padding-top: $block-margin
     .tab
       flex-grow: 1
       color: $main-light
 
   &__content
     @include flex-center
-    height: 350px
+    height: 300px
     width: 100%
-    padding: 20px
+    padding: $block-margin
     box-sizing: border-box
     .content__wrapper
       @include justify-center-between
@@ -84,7 +93,29 @@
         border-radius: 8px
 
     &__text
-      margin-left: 5%
+      margin-left: $block-margin
       text-align: start
-      button
-        background-color: $secondary-dark
+      >*:not(:first-child)
+        margin-top: $inner-block-margin
+
+.contacts
+  margin-top: $sections-margin
+  &__title
+    margin-bottom: $title-margin
+  &__content
+    @include flex-center-column
+
+    .actions
+      @include flex-center
+      &__button
+        &:not(:first-child)
+          margin-left: 8px
+
+    .links
+      @include flex-center-wrap
+      margin-top: $block-margin
+      &__title
+        width: 100%
+        margin-bottom: $inner-block-margin
+      b:not(:first-child)
+        margin-left: 8px

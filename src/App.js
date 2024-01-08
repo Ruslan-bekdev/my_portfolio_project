@@ -1,7 +1,7 @@
 import './App.sass';
 import React from "react";
 import {Route, Routes} from "react-router-dom";
-import {pagesConfig} from "./pages";
+import {pagesConfig} from "./configs/route";
 import Header from "./compnents/specific/layout/header/Header";
 
 function App() {
@@ -22,10 +22,7 @@ function App() {
 
   return (
     <div className="App">
-        <Header/>
-        <div className="content">
-            <RenderRoutes/>
-        </div>
+        <RenderRoutes/>
     </div>
   );
 }

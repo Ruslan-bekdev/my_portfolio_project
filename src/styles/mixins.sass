@@ -16,16 +16,16 @@
   align-items: center
   justify-content: center
 
+@mixin flex-center-wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+
 @mixin flex-center-column
   display: flex
   flex-direction: column
   align-items: center
-
-@mixin flex-center-column-nowrap
-  display: flex
-  flex-direction: column
-  align-items: center
-  flex-wrap: nowrap
 
 //позиционное центрирование
 @mixin center-relative
