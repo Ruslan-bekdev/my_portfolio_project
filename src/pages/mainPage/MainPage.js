@@ -4,7 +4,7 @@ import Landing from "./sections/Landing";
 import Projects from "./sections/Projects";
 import About from "./sections/About";
 import Contacts from "./sections/Contacts";
-import Header from "../../compnents/specific/layout/header/Header";
+import Header from "../../components/layout/header/Header";
 
 const MainPage = () => {
     return (

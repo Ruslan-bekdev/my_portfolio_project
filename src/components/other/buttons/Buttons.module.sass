@@ -1,0 +1,24 @@
+@import "src/styles/mixins"
+@import "src/styles/variables"
+
+.icon_button
+  @include flex-center
+  padding: 10px 20px
+  border: none
+  border-radius: 8px
+  background-color: $secondary-light !important
+  position: relative
+  cursor: pointer
+  transition: 0.3s
+
+  span
+    margin-left: 8px
+    color: $main-dark
+
+  img
+    height: 24px
+    object-fit: contain
+
+  &:hover
+    padding: 12px 24px
+    border: 1px solid $secondary-light

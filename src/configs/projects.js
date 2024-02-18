@@ -1,60 +1,65 @@
 import React from 'react';
-import toptalentCompanySite from "../assets/images/projectsScreenshots/toptalent-company-site.png";
+
+import landing from "../assets/images/projectsScreenshots/doppioCraft/landing.png";
+import catalog from "../assets/images/projectsScreenshots/doppioCraft/catalog.png";
+import catalogMobile from "../assets/images/projectsScreenshots/doppioCraft/catalog-mobile.png";
+import cart from "../assets/images/projectsScreenshots/doppioCraft/cart.png";
+
+import calculator from "../assets/images/projectsScreenshots/miniApps/calculator.png";
+import weather from "../assets/images/projectsScreenshots/miniApps/weather.png";
+import conventer from "../assets/images/projectsScreenshots/miniApps/converter.png";
+
+import toptalentDesktop from "../assets/images/projectsScreenshots/toptalent/desktop.png";
+import toptalentMobile from "../assets/images/projectsScreenshots/toptalent/mobile.png";
 
 export const projectsConfig = [
     {
-        label: 'Первая вкладка',
-        title: 'Заголовок 1',
+        header: 'Портфолио',
+        title: 'Портфолио',
         caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
-        icons: '',
-        image: 'https://www.stefantopalovic.com/static/media/coindom-full.c5fef9ca2f47e52897f8.png',
-        actions: {
-            url: ()=>console.log('Кнопка нажата'),
-            label: 'Нажми на меня',
-        },
+        pie: [15,85],
+        icons: 'html,css,sass,js,materialui',
+        url: 'https://ruslan-bekdev.github.io/DoppioCraft/',
+        github: 'https://github.com/Ruslan-bekdev/my_portfolio_project',
     },
     {
-        label: 'Вторая вкладка',
-        title: 'Заголовок 2',
+        header: 'Доппио Крафт (Doppio Craft)',
+        title: 'Doppio Craft',
         caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
-        icons: '',
-        image: 'https://www.stefantopalovic.com/static/media/coindom-full.c5fef9ca2f47e52897f8.png',
-        actions: {
-            url: ()=>console.log('Кнопка нажата'),
-            label: 'Нажми на меня',
+        pie: [30,70],
+        icons: 'html,css,js,redux,materialui,styledcomponents',
+        images: {
+            'Лендинг': landing,
+            'Каталог': catalog,
+            'Каталог (mobile)': catalogMobile,
+            'Корзина': cart,
         },
+        url: 'https://ruslan-bekdev.github.io/DoppioCraft/',
+        github: 'https://github.com/Ruslan-bekdev/DoppioCraft',
     },
     {
-        label: 'Третья вкладка',
-        title: 'Заголовок 3',
+        header: 'Мини программы (mini-apps)',
+        title: 'Mini-Apps',
         caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
-        icons: '',
-        image: 'https://www.stefantopalovic.com/static/media/coindom-full.c5fef9ca2f47e52897f8.png',
-        actions: {
-            url: ()=>console.log('Кнопка нажата'),
-            label: 'Нажми на меня',
+        pie: [90,10],
+        icons: 'html,css,js,ts,redux,materialui,styledcomponents',
+        images: {
+            calculator,
+            weather,
+            conventer
         },
+        url: 'https://ruslan-bekdev.github.io/mini_apps_for_portfolio/',
+        github: 'https://github.com/Ruslan-bekdev/mini_apps_for_portfolio',
     },
     {
-        label: 'Четвертая вкладка',
-        title: 'Заголовок 4',
-        caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
-        icons: '',
-        image: 'https://www.stefantopalovic.com/static/media/coindom-full.c5fef9ca2f47e52897f8.png',
-        actions: {
-            url: ()=>console.log('Кнопка нажата'),
-            label: 'Нажми на меня',
-        },
-    },
-    {
-        label: 'Top Talent (no-code)',
+        header: 'Top Talent (no-code)',
         title: 'Top Talent company',
         caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
         icons: 'html,css',
-        image: toptalentCompanySite,
-        actions: {
-            url: 'https://toptalentcompany.tilda.ws/',
-            label: 'Взгянуть',
+        images: {
+            desktop: toptalentDesktop,
+            mobile: toptalentMobile,
         },
+        url: 'https://toptalentcompany.tilda.ws/',
     },
 ];

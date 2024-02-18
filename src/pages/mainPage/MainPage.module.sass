@@ -1,13 +1,14 @@
 @import "src/styles/mixins"
 @import "src/styles/variables"
 
-.lol
-  background-color: #1C1C22
 .main
   &__wrapper
     margin-top: $header-height
-    *[id]
-      scroll-margin-top: $header-height
+    *
+      color: $main-light
+      &[id]
+        scroll-margin-top: $header-height
+
 .landing
   @include justify-center-between
   height: $section-vh
@@ -15,7 +16,7 @@
 
   &_block
     &__text
-      text-align: start
+      text-align: left
 
       h1,p
         max-width: 500px
@@ -62,41 +63,44 @@
 
 .projects
   margin-top: $sections-margin
+
+  .tabs *
+    color: $main-light
+
   &__title
     margin-bottom: $title-margin
+
   &__wrapper
     @include flex-center-column
     background-color: $secondary-dark
     border-radius: 8px
 
-  &__tabs
-    padding-top: $block-margin
-    .tab
-      flex-grow: 1
-      color: $main-light
-
   &__content
     @include flex-center
-    height: 300px
+    height: 400px
     width: 100%
     padding: $block-margin
     box-sizing: border-box
-    .content__wrapper
-      @include justify-center-between
+    @include justify-center-between
+    .images
       height: 100%
-      flex-grow: 1
+      @include flex-center-column
 
-  &_block
-    &__image
-      height: 100%
-      >*
+      img
         border-radius: 8px
+  &__actions
+    display: flex
+    align-items: center
+    >*:not(:first-child)
+      margin-left: 4px
 
-    &__text
-      margin-left: $block-margin
-      text-align: start
-      >*:not(:first-child)
-        margin-top: $inner-block-margin
+  &__caption
+    width: 100%
+    margin-left: $block-margin
+    text-align: start
+    >*:not(:first-child)
+      margin-top: $inner-block-margin
+
 
 .contacts
   margin-top: $sections-margin
@@ -105,11 +109,10 @@
   &__content
     @include flex-center-column
 
-    .actions
-      @include flex-center
-      &__button
-        &:not(:first-child)
-          margin-left: 8px
+  &__actions
+    @include flex-center
+    >*:not(:first-child)
+      margin-left: 8px
 
     .links
       @include flex-center-wrap

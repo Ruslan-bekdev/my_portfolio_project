@@ -12,16 +12,18 @@ export const pagesConfig = {
     },
 };
 export const anchorsConfig = {
-    about:{
-        path:'#about',
-        header:'Обо мне',
-    },
-    projects:{
-        path:'#projects',
-        header:'Проекты',
-    },
-    contacts:{
-        path:'#contacts',
-        header:'Связаться со мной',
-    },
+    main:{
+        about:{
+            path:'#about',
+            header:'Обо мне',
+        },
+        projects:{
+            path:'#projects',
+            header:'Проекты',
+        },
+        contacts:{
+            path:'#contacts',
+            header:'Связаться со мной',
+        },
+    }
 };

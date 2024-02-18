@@ -1,0 +1,30 @@
+@import "src/styles/mixins"
+@import "src/styles/variables"
+
+.overlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 0, 0.8)
+  cursor: zoom-out
+  @include flex-center
+  z-index: 998
+
+.modal
+  position: relative
+  display: inline-block
+  cursor: zoom-in
+  &__image
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 90vw
+    height: 90vh
+    @include flex-center
+    z-index: 9999
+    img
+      @include imageDefault
+      object-fit: contain

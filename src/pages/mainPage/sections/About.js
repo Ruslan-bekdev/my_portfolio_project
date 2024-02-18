@@ -3,8 +3,15 @@ import classes from '../MainPage.module.sass';
 
 const About = ({id = ''}) => {
     return (
-        <div id={id} className={`${classes.about} container`}>
-            <h2 className={classes.about__title}>Коротко о себе</h2>
+        <div
+            id={id}
+            className={`${classes.about} container`}
+        >
+            <h2
+                className={classes.about__title}
+            >
+                Коротко о себе
+            </h2>
             <p id={id}>
                 <b>Привет!</b>
                 <br/>
@@ -15,9 +22,8 @@ const About = ({id = ''}) => {
                 Меня постоянно вдохновляют возможности обучения,
                 поэтому я <b>активно изучаю </b> новые <b>технологии и библиотеки</b> для создания инновационных проектов.
                 <br/>
-                <p>
-                    Я готов внести свою <b>энергию</b> и <b>стремление к развитию</b> в <b>стремление к развитию</b>.
-                </p>
+
+                Я готов внести свою <b>энергию</b> и <b>стремление к развитию</b> в <b>стремление к развитию</b>.
             </p>
         </div>
     );

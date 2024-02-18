@@ -1,0 +1,16 @@
+@import "src/styles/mixins"
+@import "src/styles/variables"
+
+.header
+  @include flex-center
+  width: 100%
+  height: $header-height
+  background-color: $secondary-dark
+  position: fixed
+  top: 0
+  z-index: $z-index-overlay
+  &__content
+    @include justify-center-between
+    width: 100%
+    padding: 0 40px
+    box-sizing: border-box
