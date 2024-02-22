@@ -3,69 +3,82 @@
 
 .main
   &__wrapper
-    margin-top: $header-height
+    >*
+      min-height: $section-vh
+      @include flex-center
+      box-sizing: border-box
+      padding-top: header-height-plus(16px)
     *
       color: $main-light
-      &[id]
-        scroll-margin-top: $header-height
+
 
 .landing
-  @include justify-center-between
-  height: $section-vh
-  box-sizing: border-box
+  >div
+    width: 100%
+    @include justify-center-between
 
-  &_block
-    &__text
-      text-align: left
+    @media #{$mobile-width}
+      display: block
+  &__text
+    text-align: left
+    @media #{$mobile-width}
+      text-align: center
 
-      h1,p
-        max-width: 500px
+    h1,p
+      max-width: 500px
+      @media #{$mobile-width}
+        margin-inline: auto !important
+        padding-inline: 8px
+    p
+      margin-block: 20px
 
-      p
-        margin: 20px 0
+    .skills
+      &__title
+        font-weight: bold
+      hr
+        margin-block: 5px
+        color: $secondary_light
+        @media #{$mobile-width}
+          width: 250px
+          margin-inline: auto
 
-      .skills
-        &__title
-          font-weight: bold
+      &__images
+        margin-top: 10px
+        img:not(:last-child)
+          margin-right: 8px
 
-        hr
-          margin: 5px
-          color: $secondary_light
-
-        &__images
-          margin-top: 10px
-
-          img
-            transition: transform 0.2s ease-in-out
-          img:not(:last-child)
-            margin-right: 16px
-          img:hover
-            transform: scale(1.1)
-
-    &__image
-      width: auto
-      height: auto
-      max-width: 400px
-      max-height: 350px
+  &__image
+    width: auto
+    height: auto
+    max-width: 400px
+    max-height: 350px
+    border-radius: 8px
+    img
+      @include imageDefault
       border-radius: 8px
-
-      img
-        @include imageDefault
-        border-radius: 8px
-        object-fit: contain
+      object-fit: contain
+    &_start
+      display: none
+      @media #{$mobile-width}
+        display: block
+    &_end
+      @media #{$mobile-width}
+        display: none
 
 
 .about
-  margin-top: $sections-margin
   &__title
     margin-bottom: $title-margin
 
 
 .projects
-  margin-top: $sections-margin
-
+  &>div
+    width: 100%
+  .tabs
+    width: 100%
   .tabs *
     color: $main-light
+    margin-inline: auto
 
   &__title
     margin-bottom: $title-margin
@@ -76,18 +89,24 @@
     border-radius: 8px
 
   &__content
-    @include flex-center
-    height: 400px
+    @include justify-center-between
+    height: 300px
     width: 100%
     padding: $block-margin
     box-sizing: border-box
-    @include justify-center-between
     .images
-      height: 100%
+      max-height: 100%
+      max-width: 50%
       @include flex-center-column
-
       img
         border-radius: 8px
+      @media #{$mobile-width}
+        max-height: 300px
+        max-width: 100%
+    @media #{$mobile-width}
+      display: block
+      height: auto
+
   &__actions
     display: flex
     align-items: center
@@ -96,14 +115,30 @@
 
   &__caption
     width: 100%
-    margin-left: $block-margin
     text-align: start
+    margin-left: $block-margin
     >*:not(:first-child)
       margin-top: $inner-block-margin
+    &_center
+      p
+        width: 75%
+        margin-inline: auto
+      >*
+        justify-content: center
+        &:not(:first-child)
+          margin-top: $inner-block-margin
+    @media #{$mobile-width}
+      text-align: center
+      margin-left: 0
+      >*
+        max-width: 75%
+        margin-inline: auto
+        justify-content: center
+        &:not(:first-child)
+          margin-top: $inner-block-margin
 
 
 .contacts
-  margin-top: $sections-margin
   &__title
     margin-bottom: $title-margin
   &__content
@@ -114,11 +149,10 @@
     >*:not(:first-child)
       margin-left: 8px
 
-    .links
-      @include flex-center-wrap
-      margin-top: $block-margin
-      &__title
-        width: 100%
-        margin-bottom: $inner-block-margin
-      b:not(:first-child)
-        margin-left: 8px
+  .links
+    @include flex-center-wrap
+    &__title
+      width: 100%
+      margin-block: $inner-block-margin
+    b:not(:first-child)
+      margin-left: 8px

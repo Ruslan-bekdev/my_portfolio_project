@@ -12,5 +12,9 @@
   &__content
     @include justify-center-between
     width: 100%
-    padding: 0 40px
+    padding: 40px
     box-sizing: border-box
+    @media #{$mobile-width}
+      padding-inline: 20px
+    .language
+      cursor: pointer

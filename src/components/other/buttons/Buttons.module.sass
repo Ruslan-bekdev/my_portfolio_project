@@ -3,7 +3,7 @@
 
 .icon_button
   @include flex-center
-  padding: 10px 20px
+  padding: 8px 16px
   border: none
   border-radius: 8px
   background-color: $secondary-light !important
@@ -16,9 +16,10 @@
     color: $main-dark
 
   img
-    height: 24px
+    height: 16px
     object-fit: contain
 
-  &:hover
-    padding: 12px 24px
-    border: 1px solid $secondary-light
+  @media(hover: hover)
+    &:hover
+      padding: 10px 20px
+      border: 1px solid $secondary-light

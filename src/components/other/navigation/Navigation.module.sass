@@ -18,10 +18,16 @@
     transition: 3s
 
     & + .link
-      margin-left: 20px
+      margin-left: 24px
+      @media #{$mobile-width}
+        margin-left: 12px
 
-    &:hover
-      animation: enlarge 0.2s forwards
+    @media(hover: hover)
+      &:hover
+        animation: enlarge 0.2s forwards
+
+  @media (max-width: 450px)
+    display: none
 
 .active
   pointer-events: none

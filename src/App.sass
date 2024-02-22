@@ -7,7 +7,12 @@
 
 .container
   width: 100dvw
-  max-width: 950px
+  max-width: 760px
   margin-inline: auto
-  padding: 20px
+  padding-inline: $title-margin
   text-align: center
+
+  @media #{$laptop-width}
+    max-width: 850px
+  @media #{$desktop-width}
+    max-width: 1000px

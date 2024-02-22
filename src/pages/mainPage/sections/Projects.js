@@ -1,4 +1,4 @@
-import React, {useState,Fragment} from 'react';
+import React, {useState, Fragment, useEffect} from 'react';
 import classes from '../MainPage.module.sass';
 import {Tab,Tabs} from "@mui/material";
 import ScrollableImage from "../../../components/other/scrollableImage/ScrollableImage";
@@ -8,7 +8,8 @@ import {projectsConfig} from "../../../configs/projects";
 import TooltipedImage from "../../../components/other/tooltopedImage/TooltipedImage";
 import CustomPie from "../../../components/other/charts/Pie";
 
-const Projects = ({id = ''}) => {
+const Projects = ({id = '', text}) => {
+    const projectsText = text.content;
     const [projectTab,setProjectTab] = useState(0);
 
     const handleProjectChange = (e,newValue) => {
@@ -24,14 +25,14 @@ const Projects = ({id = ''}) => {
             setImageTab(newValue);
         };
 
-        return images && (
+        return (
             <div className={classes.images}>
                 {
                     Object.entries(images).map(([key,value],index)=>{
                         return imageTab === index && (
                             <ScrollableImage
                                 src={value}
-                                alt='Фото сайта'
+                                alt='Site screen'
                                 key={key}
                             />
                         );
@@ -57,17 +58,17 @@ const Projects = ({id = ''}) => {
     }
 
     const RenderTabs = () => {
-      return(
+      return (
         <Tabs
             variant="scrollable"
             value={projectTab}
             onChange={handleProjectChange}
             className={classes.tabs}
         >
-            {projectsConfig.map((item,index)=>
+            {Object.entries(projectsConfig).map(([key,value])=>
                 <Tab
-                    label={item.header}
-                    key={index}
+                    label={projectsText[key].header}
+                    key={key}
                 />
             )}
         </Tabs>
@@ -78,16 +79,23 @@ const Projects = ({id = ''}) => {
             <div
                 className={classes.projects__content}
             >
-                {projectsConfig.map((item,index) => {
-                    const {title, caption, pie, icons, images, url, github} = item;
+                {Object.entries(projectsConfig).map(([key,value],index) => {
+                    const {pie, icons, images, url, github} = value;
                     return projectTab === index && (
-                        <Fragment key={index}>
-                            <RenderImages images={images}/>
+                        <Fragment key={key}>
+                            {images &&
+                                <RenderImages images={images}/>
+                            }
                             <div
-                                className={classes.projects__caption}
+                                className={images
+                                    ?classes.projects__caption
+                                    :classes.projects__caption_center
+                                }
                             >
-                                <h3>{title}</h3>
-                                <p>{caption}</p>
+                                <h3>{projectsText[key].title}</h3>
+                                {
+                                    <p>{projectsText[key].caption}</p>
+                                }
                                 {pie && <CustomPie dataPercent={pie}/>}
                                 {icons &&
                                     <TooltipedImage
@@ -98,7 +106,7 @@ const Projects = ({id = ''}) => {
                                 }
                                 <div className={classes.projects__actions}>
                                     <IconButton
-                                        label='Взглянуть'
+                                        label={text.action}
                                         icon={international}
                                         onClick={() => navigateTo(url)}
                                     />
@@ -122,16 +130,20 @@ const Projects = ({id = ''}) => {
             id={id}
             className={`${classes.projects} container`}
         >
-            <h2
-                className={classes.projects__title}
-            >
-                Мои проекты
-            </h2>
-            <div
-                className={classes.projects__wrapper}
-            >
-                <RenderTabs/>
-                <RenderContent/>
+            <div>
+                <h2
+                    className={classes.projects__title}
+                >
+                    {
+                        text.title
+                    }
+                </h2>
+                <div
+                    className={classes.projects__wrapper}
+                >
+                    <RenderTabs/>
+                    <RenderContent/>
+                </div>
             </div>
         </div>
     );

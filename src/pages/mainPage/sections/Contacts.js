@@ -3,7 +3,7 @@ import classes from '../MainPage.module.sass';
 import IconButton from "../../../components/other/buttons/IconButton";
 import {contactsConfig} from "../../../configs/contacts";
 
-const Contacts = ({id = ''}) => {
+const Contacts = ({id = '',text}) => {
     const navigateTo = (url = '#') => {
         window.open(url,'_blank');
     };
@@ -18,14 +18,18 @@ const Contacts = ({id = ''}) => {
                     {contactsConfig.actions.map((action,index) =>
                         <IconButton
                             onClick={()=>navigateTo(action.button.url)}
-                            label={action.button.label}
+                            label={text.actions[action.button.label]}
                             icon={action.icon}
                             key={index}
                         />
                     )}
                 </div>
                 <div className={classes.links}>
-                    <h3 className={classes.links__title}>Также звоните по следующим номерам</h3>
+                    <h3
+                        className={classes.links__title}
+                    >
+                        {text.or}
+                    </h3>
                     {contactsConfig.links.map((link,index) => {
                         const firstKey = Object.keys(link)[0];
                         return (
@@ -47,12 +51,14 @@ const Contacts = ({id = ''}) => {
         <div
             className={`${classes.contacts} container`}
         >
-            <h2
-                className={classes.contacts__title}
-            >
-                Мои контакты
-            </h2>
-            <RenderContacts/>
+            <div>
+                <h2
+                    className={classes.contacts__title}
+                >
+                    {text.title}
+                </h2>
+                <RenderContacts/>
+            </div>
         </div>
     );
 };

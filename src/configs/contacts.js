@@ -19,21 +19,21 @@ export const contactsConfig = {
                 icon: whatsapp,
                 button:{
                     url: 'https://wa.me/+996700526900',
-                    label: 'Ватсап',
+                    label: 'whatsApp',
                 }
             },
             {
                 icon: telegram,
                 button:{
                     url: 'https://t.me/RuslanbekDev',
-                    label: 'Телеграм',
+                    label: 'telegram',
                 }
             },
             {
                 icon: email,
                 button:{
                     url: 'mailto:ruslanDeveloper@gmail.com',
-                    label: 'Эл почта',
+                    label: 'eMail',
                 }
             },
         ],

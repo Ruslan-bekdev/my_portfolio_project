@@ -1,5 +1,3 @@
-import React from 'react';
-
 import landing from "../assets/images/projectsScreenshots/doppioCraft/landing.png";
 import catalog from "../assets/images/projectsScreenshots/doppioCraft/catalog.png";
 import catalogMobile from "../assets/images/projectsScreenshots/doppioCraft/catalog-mobile.png";
@@ -12,33 +10,32 @@ import conventer from "../assets/images/projectsScreenshots/miniApps/converter.p
 import toptalentDesktop from "../assets/images/projectsScreenshots/toptalent/desktop.png";
 import toptalentMobile from "../assets/images/projectsScreenshots/toptalent/mobile.png";
 
-export const projectsConfig = [
-    {
+export const projectsConfig = {
+    portfolio: {
         header: 'Портфолио',
         title: 'Портфолио',
         caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
         pie: [15,85],
-        icons: 'html,css,sass,js,materialui',
+        icons: 'html,css,sass,js,redux,materialui',
         url: 'https://ruslan-bekdev.github.io/DoppioCraft/',
         github: 'https://github.com/Ruslan-bekdev/my_portfolio_project',
     },
-    {
-        header: 'Доппио Крафт (Doppio Craft)',
+    doppioCraft: {
+        header: 'Doppio Craft',
         title: 'Doppio Craft',
-        caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
         pie: [30,70],
         icons: 'html,css,js,redux,materialui,styledcomponents',
         images: {
-            'Лендинг': landing,
-            'Каталог': catalog,
-            'Каталог (mobile)': catalogMobile,
-            'Корзина': cart,
+            landing,
+            catalog,
+            'Catalog (mobile)': catalogMobile,
+            cart,
         },
         url: 'https://ruslan-bekdev.github.io/DoppioCraft/',
         github: 'https://github.com/Ruslan-bekdev/DoppioCraft',
     },
-    {
-        header: 'Мини программы (mini-apps)',
+    miniApps: {
+        header: 'Мини программы',
         title: 'Mini-Apps',
         caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
         pie: [90,10],
@@ -51,7 +48,7 @@ export const projectsConfig = [
         url: 'https://ruslan-bekdev.github.io/mini_apps_for_portfolio/',
         github: 'https://github.com/Ruslan-bekdev/mini_apps_for_portfolio',
     },
-    {
+    topTalent: {
         header: 'Top Talent (no-code)',
         title: 'Top Talent company',
         caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
@@ -62,4 +59,4 @@ export const projectsConfig = [
         },
         url: 'https://toptalentcompany.tilda.ws/',
     },
-];
+};

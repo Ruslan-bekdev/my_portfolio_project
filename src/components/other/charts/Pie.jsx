@@ -7,6 +7,7 @@ import {
     Legend
 } from 'chart.js'
 import {Pie} from "react-chartjs-2";
+import {useSelector} from "react-redux";
 
 Chart.register(
     ArcElement,
@@ -15,6 +16,7 @@ Chart.register(
 );
 
 const CustomPie = ({dataPercent}) => {
+    const {content} = useSelector(state => state.textReducer);
     const data = {
         datasets: [{
             data: dataPercent,
@@ -36,7 +38,9 @@ const CustomPie = ({dataPercent}) => {
                             display: 'block'
                         }}
                     >
-                        Верстка
+                        {
+                            content.projects.pie[0]
+                        }
                     </b>
                     <b
                         style={{
@@ -44,7 +48,9 @@ const CustomPie = ({dataPercent}) => {
                             display: 'block'
                         }}
                     >
-                        Логика
+                        {
+                            content.projects.pie[1]
+                        }
                     </b>
                 </div>
             </div>

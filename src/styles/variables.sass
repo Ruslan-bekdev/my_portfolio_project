@@ -1,7 +1,9 @@
 $header-height: 60px
 $section-vh: calc(100dvh - #{$header-height})
 @function section-vh-plus($number)
-  @return $number + $section-vh + px
+  @return $number + $section-vh
+@function header-height-plus($number)
+  @return $number + $header-height
 
 //цвета
 $main-dark: #161513
@@ -10,15 +12,15 @@ $main-light: #E3E0DEFF
 $secondary-light: #B5B5BBFF
 
 //размеры
-$title-margin: 50px
-$sections-margin: 200px
+$title-margin: 25px
 $block-margin: $title-margin / 2
 $inner-block-margin: $block-margin / 2
 
 //медиа запросы
-$mobile-width: 768px
-$tablet-width: 1024px
-$desktop-width: 1200px
+$mobile-width: "(max-width: 767px)"
+$tablet-width: "(min-width: 767px) and (max-width: 991px)"
+$laptop-width: "(min-width: 991px) and (max-width: 1200px)"
+$desktop-width: "(min-width: 1200px)"
 
 //z индекс
 $z-index-popup: 500

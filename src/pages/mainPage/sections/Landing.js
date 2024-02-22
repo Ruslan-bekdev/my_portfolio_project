@@ -14,8 +14,7 @@ const iconsSet = [
     {icons: 'figma', tooltip: 'Figma'},
 ];
 
-const Landing = ({id = ''}) => {
-
+const Landing = ({id = '', text}) => {
     const RenderIcons = () => (
         <div
             className={classes.skills__images}
@@ -38,27 +37,45 @@ const Landing = ({id = ''}) => {
             id={id}
             className={`${classes.landing} container`}
         >
-            <div
-                className={classes.landing_block__text}
-            >
-                <h1>Front-End React Разработчик</h1>
-                <p>Меня зовут Руслан и я начинающий Front-End разработчик из Кыргызстана</p>
+            <div>
+                <ZoomableImage
+                    className={`${classes.landing__image} ${classes.landing__image_start}`}
+                    src={myPhoto}
+                    alt="My photo"
+                />
                 <div
-                    className={classes.skills}
+                    className={classes.landing__text}
                 >
-                    <span
-                        className={classes.skills__title}
+                    <h3>{text.h3}</h3>
+                    <h1>
+                        {text.h1[0]} <b>
+                            {text.h1[1]}
+                        </b>
+                    </h1>
+                    <h2>{text.h2}</h2>
+                    <p>
+                        {text.p[0]}
+                        <br/>
+                        {text.p[1]}
+                    </p>
+                    <div
+                        className={classes.skills}
                     >
-                        Мои навыки:
-                    </span>
-                    <br/>
-                    <RenderIcons/>
+                        <span
+                            className={classes.skills__title}
+                        >
+                            {text.skillsTitle}:
+                        </span>
+                        <br/>
+                        <RenderIcons/>
+                    </div>
                 </div>
+                <ZoomableImage
+                    className={`${classes.landing__image} ${classes.landing__image_end}`}
+                    src={myPhoto}
+                    alt="My photo"
+                />
             </div>
-            <ZoomableImage
-                className={classes.landing_block__image}
-                src={myPhoto}
-                alt="Моя фотография"/>
         </div>
     );
 };
