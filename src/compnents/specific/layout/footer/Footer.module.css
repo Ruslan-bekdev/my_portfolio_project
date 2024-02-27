@@ -6,4 +6,5 @@
     justify-content: space-around;
     background-color: black;
     color: white;
+    z-index: 10000;
 }
