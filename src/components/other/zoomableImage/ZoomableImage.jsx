@@ -16,7 +16,7 @@ const ZoomableImage = ({src, alt, className = ''}) => {
             <img
                 src={src}
                 alt={alt}
-                className={className}
+                className={`${className} ${classes.image}`}
             />
             {zoomed &&
                 <div

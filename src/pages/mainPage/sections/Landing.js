@@ -33,7 +33,7 @@ const Landing = ({id = '', text}) => {
     );
 
     return (
-        <div
+        <section
             id={id}
             className={`${classes.landing} container`}
         >
@@ -58,17 +58,16 @@ const Landing = ({id = '', text}) => {
                         <br/>
                         {text.p[1]}
                     </p>
-                    <div
+                    <figure
                         className={classes.skills}
                     >
-                        <span
+                        <figcaption
                             className={classes.skills__title}
                         >
                             {text.skillsTitle}:
-                        </span>
-                        <br/>
+                        </figcaption>
                         <RenderIcons/>
-                    </div>
+                    </figure>
                 </div>
                 <ZoomableImage
                     className={`${classes.landing__image} ${classes.landing__image_end}`}
@@ -76,7 +75,7 @@ const Landing = ({id = '', text}) => {
                     alt="My photo"
                 />
             </div>
-        </div>
+        </section>
     );
 };
 

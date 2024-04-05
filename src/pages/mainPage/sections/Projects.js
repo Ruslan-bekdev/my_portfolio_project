@@ -126,7 +126,7 @@ const Projects = ({id = '', text}) => {
     };
 
     return (
-        <div
+        <section
             id={id}
             className={`${classes.projects} container`}
         >
@@ -145,7 +145,7 @@ const Projects = ({id = '', text}) => {
                     <RenderContent/>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

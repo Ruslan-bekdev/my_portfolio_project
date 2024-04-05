@@ -1,3 +1,10 @@
+import noCode from '../assets/images/about/noCode.JPG';
+import noCode_me from '../assets/images/about/noCode_me.jpg';
+import geekTech_ru from '../assets/images/about/geektech_ru.JPG';
+import geekTech_kg from '../assets/images/about/geektech_kg.JPG';
+import geekTech_en from '../assets/images/about/geektech_en.JPG';
+import geekTech_me from '../assets/images/about/geektech_me.jpg';
+
 export const texts_ru = {
     language: 'ru',
     content: {
@@ -20,6 +27,10 @@ export const texts_ru = {
             skillsTitle: 'Мои навыки'
         },
         about: {
+            images: {
+              noCode: [noCode,noCode_me],
+              geekTech: [geekTech_ru,geekTech_me],
+            },
             title: 'Коротко о себе:',
             p: 'Привет!\n' +
                 'Я Фронтенд-разработчик с огромным желанием внести свой вклад в веб-технологии.\n' +
@@ -93,6 +104,10 @@ export const texts_kg = {
             skillsTitle: 'Менин жеткиликтерим:'
         },
         about: {
+            images: {
+                noCode: [noCode,noCode_me],
+                geekTech: [geekTech_kg,geekTech_me],
+            },
             title: 'Мен туралуу кыскача',
             p: 'Салам!\n' +
                 'Я Фронтенд-разработчик с огромным желанием внести свой вклад в веб-технологии.\n' +
@@ -166,6 +181,10 @@ export const texts_en = {
             skillsTitle: 'My skills'
         },
         about: {
+            images: {
+                noCode: [noCode,noCode_me],
+                geekTech: [geekTech_en,geekTech_me],
+            },
             title: 'About me',
             p: 'Hello!\n' +
                 'Я Фронтенд-разработчик с огромным желанием внести свой вклад в веб-технологии.\n' +

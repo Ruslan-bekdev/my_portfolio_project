@@ -28,33 +28,31 @@ const CustomPie = ({dataPercent}) => {
     };
 
     return (
-        <div className={classes.pie}>
+        <figure className={classes.pie}>
             <Pie data={data}/>
-            <div>
-                <div>
-                    <b
-                        style={{
-                            color: '#ffa07a',
-                            display: 'block'
-                        }}
-                    >
-                        {
-                            content.projects.pie[0]
-                        }
-                    </b>
-                    <b
-                        style={{
-                            color: '#34495e',
-                            display: 'block'
-                        }}
-                    >
-                        {
-                            content.projects.pie[1]
-                        }
-                    </b>
-                </div>
-            </div>
-        </div>
+            <figcaption>
+                <b
+                    style={{
+                        color: '#ffa07a',
+                        display: 'block'
+                    }}
+                >
+                    {
+                        content.projects.pie[0]
+                    }
+                </b>
+                <b
+                    style={{
+                        color: '#34495e',
+                        display: 'block'
+                    }}
+                >
+                    {
+                        content.projects.pie[1]
+                    }
+                </b>
+            </figcaption>
+        </figure>
     );
 };
 

@@ -2,12 +2,11 @@
 @import "src/styles/variables"
 
 .main
-  &__wrapper
     >*
       min-height: $section-vh
       @include flex-center
       box-sizing: border-box
-      padding-top: header-height-plus(16px)
+      padding-block: header-height-plus(16px)
     *
       color: $main-light
 
@@ -67,8 +66,42 @@
 
 
 .about
+  flex-wrap: wrap
+  justify-content: space-between
+
   &__title
+    width: 100%
     margin-bottom: $title-margin
+  &__block1, &__block2, &__block2_mobile
+    width: 45%
+    margin-top: -15%
+    @media #{$mobile-width}
+      width: 100%
+      margin-top: 5%
+
+  &__block2, &__block2_mobile
+    p:first-of-type
+      margin-block: $title-margin
+
+  &__block2
+    margin-top: 30%
+
+    &_mobile
+      display: none
+
+    @media #{$mobile-width}
+      display: none
+      &_mobile
+        display: inline-block !important
+        margin-top: 5%
+
+
+  &__image
+    width: 100%
+    @media #{$mobile-width}
+      width: 75%
+
+
 
 
 .projects

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect,Fragment} from 'react';
 import classes from './MainPage.module.sass';
 import Landing from "./sections/Landing";
 import Projects from "./sections/Projects";
@@ -37,14 +37,14 @@ const MainPage = () => {
     },[]);
 
     return isTextReducerEmpty() ?'' :(
-        <div className={classes.main}>
+        <Fragment>
             <Header
                 language={textReducer.language}
                 languageTitle={textReducer.content.header.title}
                 linksText={textReducer.content.header.links}
                 setNextLanguage={setNextLanguageAction}
             />
-            <div className={classes.main__wrapper}>
+            <main className={classes.main}>
                 <Landing
                     text={textReducer.content.landing}
                 />
@@ -60,8 +60,8 @@ const MainPage = () => {
                     id='contacts'
                     text={textReducer.content.contacts}
                 />
-            </div>
-        </div>
+            </main>
+        </Fragment>
     );
 };
 

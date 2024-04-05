@@ -48,7 +48,7 @@ const Contacts = ({id = '',text}) => {
     };
 
     return (
-        <div
+        <section
             className={`${classes.contacts} container`}
         >
             <div>
@@ -59,7 +59,7 @@ const Contacts = ({id = '',text}) => {
                 </h2>
                 <RenderContacts/>
             </div>
-        </div>
+        </section>
     );
 };
 

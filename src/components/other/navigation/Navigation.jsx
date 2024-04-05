@@ -6,7 +6,7 @@ import {HashLink} from "react-router-hash-link";
 const Navigation = ({config, text}) => {
     const location = useLocation();
     return (
-        <div className={classes.wrapper}>
+        <nav className={classes.wrapper}>
             {Object.entries(config).map(([key, value]) => {
                 const isActive = location.pathname === value
                     ?classes.active :'';
@@ -23,7 +23,7 @@ const Navigation = ({config, text}) => {
                     </HashLink>
                 )
             })}
-        </div>
+        </nav>
     );
 };
 

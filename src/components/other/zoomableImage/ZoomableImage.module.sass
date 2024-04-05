@@ -12,10 +12,18 @@
   @include flex-center
   z-index: 998
 
+.image
+  transition: .3s ease-in-out
+  @media (hover: hover)
+    &:hover
+      transform: scale(1.1)
+
 .modal
   position: relative
   display: inline-block
   cursor: zoom-in
+  overflow: hidden
+  border-radius: 8px
   &__image
     position: fixed
     top: 50%
