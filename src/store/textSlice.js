@@ -1,10 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {
-    texts_ru,
-    texts_kg,
-    texts_en,
-    allTexts,
-} from "../configs/texts";
+import allTexts from "../configs/texts";
 
 const textSlice = createSlice({
     name: 'textSlice',
@@ -13,17 +8,9 @@ const textSlice = createSlice({
         content: {},
     },
     reducers:{
-        setLanguage_RU: (state) => {
-            state.language = texts_ru.language;
-            state.content = texts_ru.content;
-        },
-        setLanguage_KG: (state) => {
-            state.language = texts_kg.language;
-            state.content = texts_kg.content;
-        },
-        setLanguage_EN: (state) => {
-            state.language = texts_en.language;
-            state.content = texts_en.content;
+        setDefaultLanguage: (state,action) => {
+            state.language = action.payload.language;
+            state.content = action.payload.content;
         },
         setNextLanguage: (state) => {
             const prevLangIndex = allTexts.findIndex(text => text.language === state.language);
@@ -37,9 +24,7 @@ const textSlice = createSlice({
 });
 
 export const {
-    setLanguage_RU,
-    setLanguage_KG,
-    setLanguage_EN,
+    setDefaultLanguage,
     setNextLanguage,
 } = textSlice.actions;
 export default textSlice.reducer;

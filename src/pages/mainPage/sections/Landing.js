@@ -14,7 +14,7 @@ const iconsSet = [
     {icons: 'figma', tooltip: 'Figma'},
 ];
 
-const Landing = ({id = '', text}) => {
+const Landing = ({text}) => {
     const RenderIcons = () => (
         <div
             className={classes.skills__images}
@@ -34,7 +34,6 @@ const Landing = ({id = '', text}) => {
 
     return (
         <section
-            id={id}
             className={`${classes.landing} container`}
         >
             <div>

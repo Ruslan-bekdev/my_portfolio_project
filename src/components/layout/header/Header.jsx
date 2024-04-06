@@ -11,10 +11,14 @@ const Header = ({language, setNextLanguage, languageTitle, linksText}) => {
                     onClick={setNextLanguage}
                     className={classes.language}
                 >
-                    <h3>{languageTitle}: <span>
+                    <dl className={classes.language}>
+                        <dt>
+                            {languageTitle}:
+                        </dt>
+                        <dd>
                             {language}
-                        </span>
-                    </h3>
+                        </dd>
+                    </dl>
                 </div>
                 <Navigation
                     config={anchorsConfig}

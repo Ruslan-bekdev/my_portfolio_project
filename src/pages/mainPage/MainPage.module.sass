@@ -6,7 +6,7 @@
       min-height: $section-vh
       @include flex-center
       box-sizing: border-box
-      padding-block: header-height-plus(16px)
+      padding-top: header-height-plus(32px)
     *
       color: $main-light
 
@@ -93,15 +93,15 @@
       display: none
       &_mobile
         display: inline-block !important
-        margin-top: 5%
+        margin-top: 15%
+        &:first-of-type
+          margin-top: 5%
 
 
   &__image
     width: 100%
     @media #{$mobile-width}
       width: 75%
-
-
 
 
 .projects
@@ -136,6 +136,9 @@
       @media #{$mobile-width}
         max-height: 300px
         max-width: 100%
+    .noImageAlert
+      font-size: .5rem
+      margin-block: .5rem
     @media #{$mobile-width}
       display: block
       height: auto
@@ -163,8 +166,8 @@
     @media #{$mobile-width}
       text-align: center
       margin-left: 0
+
       >*
-        max-width: 75%
         margin-inline: auto
         justify-content: center
         &:not(:first-child)
@@ -172,6 +175,7 @@
 
 
 .contacts
+  padding-bottom: header-height-plus(32px)
   &__title
     margin-bottom: $title-margin
   &__content

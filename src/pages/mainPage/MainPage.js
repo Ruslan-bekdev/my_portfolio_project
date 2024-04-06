@@ -7,36 +7,37 @@ import Contacts from "./sections/Contacts";
 import Header from "../../components/layout/header/Header";
 import {useDispatch, useSelector} from "react-redux";
 import {
-    setLanguage_EN,
-    setLanguage_KG,
-    setLanguage_RU,
+    setDefaultLanguage,
     setNextLanguage,
 } from "../../store/textSlice";
+import {defaultLanguage} from "../../configs/texts";
 
 const MainPage = () => {
     const dispatch = useDispatch();
     const textReducer = useSelector(state => state.textReducer)
-    const isTextReducerEmpty = () =>
-        Object.entries(textReducer.content).length === 0;
-
-    const setLanguageAction_KG = () => {
-        dispatch(setLanguage_KG());
-    };
-    const setLanguageAction_RU = () => {
-        dispatch(setLanguage_RU());
-    };
-    const setLanguageAction_EN = () => {
-        dispatch(setLanguage_EN());
-    };
     const setNextLanguageAction = () => {
         dispatch(setNextLanguage());
     };
+    const saveLanguageToLocalStorage = () => {
+        localStorage.setItem('portfolio-config', JSON.stringify(textReducer));
+    };
+    const getLanguageFromLocalStorage = () => {
+        const storedConfig = localStorage.getItem('portfolio-config');
+        return storedConfig ?JSON.parse(storedConfig) :defaultLanguage;
+    };
 
     useEffect(()=>{
-        setLanguageAction_RU();
+        dispatch(setDefaultLanguage(getLanguageFromLocalStorage()));
     },[]);
+    useEffect(() => {
+        textReducer.language && saveLanguageToLocalStorage();
+    }, [textReducer.language]);
 
-    return isTextReducerEmpty() ?'' :(
+    if (!textReducer.language) {
+        return <></>;
+    }
+
+    return (
         <Fragment>
             <Header
                 language={textReducer.language}

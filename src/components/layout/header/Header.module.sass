@@ -14,7 +14,13 @@
     width: 100%
     padding: 40px
     box-sizing: border-box
-    @media #{$mobile-width}
-      padding-inline: 20px
     .language
       cursor: pointer
+      font-weight: bold
+      dt,dd
+        display: inline-block
+      dd
+        margin-left: .2rem
+
+    @media #{$mobile-width}
+      padding-inline: 20px

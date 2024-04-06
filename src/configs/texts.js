@@ -54,6 +54,13 @@ export const texts_ru = {
                     caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ' +
                         'ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
                 },
+                fitegCopy:{
+                    header: 'Fiteg copy',
+                    noImageAlert: 'Наличие анимаций мешает передать вид сайта через фотографии. Насладитесь видом лично :)',
+                    title: 'Fiteg copy',
+                    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ' +
+                        'ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
+                },
                 miniApps:{
                     header: 'Мини программы',
                     title: 'Mini-Apps',
@@ -128,6 +135,13 @@ export const texts_kg = {
                 doppioCraft:{
                     header: 'Doppio Craft',
                     title: 'Doppio Craft',
+                    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ' +
+                        'ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
+                },
+                fitegCopy:{
+                    header: 'Fiteg',
+                    noImageAlert: 'Анимациялар беттик көрүнүштү түзөтүп, суроолордон сайттын көрүнүшүн ачуу укугу болот. Көрүүдү көңүлдүңүз :)',
+                    title: 'Fiteg copy',
                     caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ' +
                         'ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
                 },
@@ -208,6 +222,13 @@ export const texts_en = {
                     caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ' +
                         'ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
                 },
+                fitegCopy:{
+                    header: 'Fiteg',
+                    noImageAlert: 'The presence of animations prevents conveying the appearance of the website through photographs. Enjoy the view firsthand :)',
+                    title: 'Fiteg copy',
+                    caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet, tortor eget ullamcorper convallis, ' +
+                        'ipsum metus gravida mauris. Nullam in ipsum a libero mollis condimentum vel ac nisi.',
+                },
                 miniApps:{
                     header: 'Mini apps',
                     title: 'Mini-Apps',
@@ -236,4 +257,6 @@ export const texts_en = {
     },
 };
 
-export const allTexts = [texts_ru,texts_kg,texts_en];
+export const defaultLanguage = texts_ru;
+const allTexts = [texts_ru,texts_kg,texts_en];
+export default allTexts;

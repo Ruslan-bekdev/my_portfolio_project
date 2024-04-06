@@ -81,10 +81,14 @@ const Projects = ({id = '', text}) => {
             >
                 {Object.entries(projectsConfig).map(([key,value],index) => {
                     const {pie, icons, images, url, github} = value;
+                    const noImageAlert = text.content[key].noImageAlert;
                     return projectTab === index && (
                         <Fragment key={key}>
                             {images &&
                                 <RenderImages images={images}/>
+                            }
+                            {noImageAlert &&
+                                <span className={classes.noImageAlert}>*{noImageAlert}</span>
                             }
                             <div
                                 className={images
@@ -93,9 +97,7 @@ const Projects = ({id = '', text}) => {
                                 }
                             >
                                 <h3>{projectsText[key].title}</h3>
-                                {
-                                    <p>{projectsText[key].caption}</p>
-                                }
+                                <p>{projectsText[key].caption}</p>
                                 {pie && <CustomPie dataPercent={pie}/>}
                                 {icons &&
                                     <TooltipedImage
@@ -134,9 +136,7 @@ const Projects = ({id = '', text}) => {
                 <h2
                     className={classes.projects__title}
                 >
-                    {
-                        text.title
-                    }
+                    {text.title} ({Object.entries(projectsConfig).length})
                 </h2>
                 <div
                     className={classes.projects__wrapper}

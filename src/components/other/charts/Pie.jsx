@@ -37,9 +37,7 @@ const CustomPie = ({dataPercent}) => {
                         display: 'block'
                     }}
                 >
-                    {
-                        content.projects.pie[0]
-                    }
+                    {content.projects.pie[0]}
                 </b>
                 <b
                     style={{
@@ -47,9 +45,7 @@ const CustomPie = ({dataPercent}) => {
                         display: 'block'
                     }}
                 >
-                    {
-                        content.projects.pie[1]
-                    }
+                    {content.projects.pie[1]}
                 </b>
             </figcaption>
         </figure>
