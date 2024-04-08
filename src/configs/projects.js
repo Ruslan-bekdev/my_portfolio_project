@@ -14,7 +14,6 @@ export const projectsConfig = {
     portfolio: {
         pie: [15,85],
         icons: 'html,css,sass,js,redux,materialui',
-        url: 'https://ruslan-bekdev.github.io/DoppioCraft/',
         github: 'https://github.com/Ruslan-bekdev/my_portfolio_project',
     },
     doppioCraft: {

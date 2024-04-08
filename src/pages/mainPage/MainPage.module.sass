@@ -73,14 +73,13 @@
     width: 100%
     margin-bottom: $title-margin
   &__block1, &__block2, &__block2_mobile
-    width: 45%
-    margin-top: -15%
+    width: 48%
     @media #{$mobile-width}
       width: 100%
       margin-top: 5%
 
   &__block2, &__block2_mobile
-    p:first-of-type
+    p
       margin-block: $title-margin
 
   &__block2
@@ -123,7 +122,7 @@
 
   &__content
     @include justify-center-between
-    height: 300px
+    height: 420px
     width: 100%
     padding: $block-margin
     box-sizing: border-box
@@ -136,9 +135,6 @@
       @media #{$mobile-width}
         max-height: 300px
         max-width: 100%
-    .noImageAlert
-      font-size: .5rem
-      margin-block: .5rem
     @media #{$mobile-width}
       display: block
       height: auto
@@ -156,8 +152,9 @@
     >*:not(:first-child)
       margin-top: $inner-block-margin
     &_center
+      margin-inline: auto
       p
-        width: 75%
+        width: 90%
         margin-inline: auto
       >*
         justify-content: center

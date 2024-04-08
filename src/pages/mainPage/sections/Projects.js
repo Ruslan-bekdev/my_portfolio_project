@@ -81,14 +81,10 @@ const Projects = ({id = '', text}) => {
             >
                 {Object.entries(projectsConfig).map(([key,value],index) => {
                     const {pie, icons, images, url, github} = value;
-                    const noImageAlert = text.content[key].noImageAlert;
                     return projectTab === index && (
                         <Fragment key={key}>
                             {images &&
                                 <RenderImages images={images}/>
-                            }
-                            {noImageAlert &&
-                                <span className={classes.noImageAlert}>*{noImageAlert}</span>
                             }
                             <div
                                 className={images
@@ -107,11 +103,13 @@ const Projects = ({id = '', text}) => {
                                     />
                                 }
                                 <div className={classes.projects__actions}>
-                                    <IconButton
-                                        label={text.action}
-                                        icon={international}
-                                        onClick={() => navigateTo(url)}
-                                    />
+                                    {url &&
+                                        <IconButton
+                                           label={text.action}
+                                            icon={international}
+                                            onClick={() => navigateTo(url)}
+                                        />
+                                    }
                                     {github &&
                                         <IconButton
                                             icon={'https://skillicons.dev/icons?i=github'}
