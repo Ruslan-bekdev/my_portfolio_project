@@ -77,7 +77,7 @@ const Projects = ({id = '', text}) => {
     const RenderContent = () => {
         return (
             <div
-                className={classes.projects__content}
+                className={classes.project}
             >
                 {Object.entries(projectsConfig).map(([key,value],index) => {
                     const {pie, icons, images, url, github} = value;
@@ -88,8 +88,8 @@ const Projects = ({id = '', text}) => {
                             }
                             <div
                                 className={images
-                                    ?classes.projects__caption
-                                    :classes.projects__caption_center
+                                    ?classes.project__caption
+                                    :classes.project__caption_center
                                 }
                             >
                                 <h3>{projectsText[key].title}</h3>
@@ -102,7 +102,7 @@ const Projects = ({id = '', text}) => {
                                         alt={icons}
                                     />
                                 }
-                                <div className={classes.projects__actions}>
+                                <div className={classes.project__actions}>
                                     {url &&
                                         <IconButton
                                            label={text.action}
@@ -136,6 +136,9 @@ const Projects = ({id = '', text}) => {
                 >
                     {text.title} ({Object.entries(projectsConfig).length})
                 </h2>
+                <p
+                    className={classes.projects__caption}
+                >{text.caption}</p>
                 <div
                     className={classes.projects__wrapper}
                 >

@@ -47,6 +47,11 @@ export const texts_ru = {
         },
         projects: {
             title: 'Мои проекты',
+            caption: 'Здесь представлены мои лучшие пет-проекты с подробными описаниями и фотографиями. ' +
+                'Также есть диаграмма, иллюстрирующая соотношение Логики и Верстки в коде. ' +
+                'Ниже приведен список основных технологий, использованных в проекте. ' +
+                'И в конце размещены 2 кнопки: одна позволяет перейти на сайт проекта, ' +
+                'а другая - перейти в мой личный репозиторий на GitHub, где можно увидеть весь код проекта',
             content: {
                 portfolio:{
                     header: 'Портфолио',
@@ -136,6 +141,9 @@ export const texts_kg = {
         },
         projects: {
             title: 'Менин проектерим',
+            caption: 'Экинчи жактан менин эң кызыктуу пет-проекттерим менчек аныктамалар менен жана сүрөттөмөлөр менен көрсөтүлгөн. ' +
+                'Бунун жана коддогу Логика мен Жабдуулардын үлгүлөрүнү көрсөтүү диаграмма бар. Акыркы жерде, проектте колдонулган башка технологиялардын тизмеси берилген. ' +
+                'Акыркыда эки баскыч бар: бири, проект сайтына өтүүгө уруксат берет, жана башкасы - менин Github шаалымдагы шаалымды жана артка кодду көрө аласыздар, жакшы.',
             content: {
                 portfolio:{
                     header: "Портфолио",
@@ -225,6 +233,10 @@ export const texts_en = {
         },
         projects: {
             title: 'My projects',
+            caption: 'Here are my best pet projects with detailed descriptions and photos. ' +
+                'Additionally, there is a diagram illustrating the ratio of Logic to Markup in the code. ' +
+                'Below is a list of the main technologies used in the project. At the end, there are two buttons: ' +
+                'one allows you to go to the project website, and the other - to go to my personal GitHub repository, where you can see all the project code.',
             content: {
                 portfolio:{
                     header: "Portfolio",

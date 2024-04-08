@@ -112,15 +112,15 @@
     color: $main-light
     margin-inline: auto
 
-  &__title
-    margin-bottom: $title-margin
+  &__caption
+    margin-block: $title-margin
 
   &__wrapper
     @include flex-center-column
     background-color: $secondary-dark
     border-radius: 8px
 
-  &__content
+  .project
     @include justify-center-between
     height: 420px
     width: 100%
@@ -139,36 +139,36 @@
       display: block
       height: auto
 
-  &__actions
-    display: flex
-    align-items: center
-    >*:not(:first-child)
-      margin-left: 4px
+    &__actions
+      display: flex
+      align-items: center
+      >*:not(:first-child)
+        margin-left: 4px
 
-  &__caption
-    width: 100%
-    text-align: start
-    margin-left: $block-margin
-    >*:not(:first-child)
-      margin-top: $inner-block-margin
-    &_center
-      margin-inline: auto
-      p
-        width: 90%
+    &__caption
+      width: 100%
+      text-align: start
+      margin-left: $block-margin
+      >*:not(:first-child)
+        margin-top: $inner-block-margin
+      &_center
         margin-inline: auto
-      >*
-        justify-content: center
-        &:not(:first-child)
-          margin-top: $inner-block-margin
-    @media #{$mobile-width}
-      text-align: center
-      margin-left: 0
+        p
+          width: 90%
+          margin-inline: auto
+        >*
+          justify-content: center
+          &:not(:first-child)
+            margin-top: $inner-block-margin
+      @media #{$mobile-width}
+        text-align: center
+        margin-left: 0
 
-      >*
-        margin-inline: auto
-        justify-content: center
-        &:not(:first-child)
-          margin-top: $inner-block-margin
+        >*
+          margin-inline: auto
+          justify-content: center
+          &:not(:first-child)
+            margin-top: $inner-block-margin
 
 
 .contacts
