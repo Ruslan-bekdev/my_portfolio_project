@@ -37,11 +37,6 @@ const Landing = ({text}) => {
             className={`${classes.landing} container`}
         >
             <div>
-                <ZoomableImage
-                    className={`${classes.landing__image} ${classes.landing__image_start}`}
-                    src={myPhoto}
-                    alt="My photo"
-                />
                 <div
                     className={classes.landing__text}
                 >
@@ -69,7 +64,7 @@ const Landing = ({text}) => {
                     </figure>
                 </div>
                 <ZoomableImage
-                    className={`${classes.landing__image} ${classes.landing__image_end}`}
+                    className={classes.landing__image}
                     src={myPhoto}
                     alt="My photo"
                 />

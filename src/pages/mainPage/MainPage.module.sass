@@ -15,9 +15,10 @@
   >div
     width: 100%
     @include justify-center-between
+    gap: 1rem
 
     @media #{$mobile-width}
-      display: block
+      flex-direction: column-reverse
   &__text
     text-align: left
     @media #{$mobile-width}
@@ -43,8 +44,6 @@
 
       &__images
         margin-top: 10px
-        img:not(:last-child)
-          margin-right: 8px
 
   &__image
     width: auto
@@ -56,13 +55,6 @@
       @include imageDefault
       border-radius: 8px
       object-fit: contain
-    &_start
-      display: none
-      @media #{$mobile-width}
-        display: block
-    &_end
-      @media #{$mobile-width}
-        display: none
 
 
 .about
@@ -154,7 +146,7 @@
       &_center
         margin-inline: auto
         p
-          width: 90%
+          width: 98%
           margin-inline: auto
         >*
           justify-content: center
@@ -179,9 +171,11 @@
     @include flex-center-column
 
   &__actions
+    max-width: 100vw
     @include flex-center
-    >*:not(:first-child)
-      margin-left: 8px
+    gap: .5rem
+    >*
+      max-width: 30%
 
   .links
     @include flex-center-wrap

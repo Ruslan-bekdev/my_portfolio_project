@@ -57,7 +57,8 @@ export const texts_ru = {
                     header: 'Портфолио',
                     title: 'Портфолио',
                     caption: 'Здесь собраны мои небольшие практические задания, созданные в процессе изучения различных технологий и языков программирования. ' +
-                        'От простых скриптов до небольших веб-приложений - каждый проект отражает мой опыт и умение применять полученные знания на практике.',
+                        'От простых скриптов до небольших веб-приложений - каждый проект отражает мой опыт и умение применять полученные знания на практике. ' +
+                        'Хотелось бы заметить, что каждая моя фотография на этом сайте кликабельна и умеет увеличиваться. Это сделано на чистом коде вручную без библиотек ',
                 },
                 doppioCraft:{
                     header: 'Doppio Craft',
@@ -67,9 +68,9 @@ export const texts_ru = {
                 fitegCopy:{
                     header: 'Fiteg copy',
                     title: 'Fiteg copy',
-                    caption: 'Мой лучший проект в плане верстки. Этот дизайн вдохнавлен существующей одноименной компанией. И этот опыт был очень важен для ' +
-                        'прокачки моих способностей к верстке и анимаций. Некоторый детали изменены по моему усмотрению. ' +
-                        'Наличие анимаций мешает передать вид сайта через фотографии. НЖмите на кнопку ниже и асладитесь видом лично :)',
+                    caption: 'Мой лучший проект в области верстки, вдохновленный одноименной компанией. Этот сайт написан полностью вручную, ' +
+                        'без использования библиотек для стилизации, что отлично показывает мои навыки верстки и анимации.' +
+                        'Анимации делают сайт живым, не передаваемым через фото. Посмотрите на сайт лично, нажав на кнопку ниже.',
                 },
                 miniApps:{
                     header: 'Мини программы',
@@ -149,7 +150,8 @@ export const texts_kg = {
                     header: "Портфолио",
                     title: "Портфолио",
                     caption: "Бул жерде мен өз сабактык технологияларды жана программалоо тилилерин көргөзүү аясында жасалган менчек көз тапкырларды көрсөтө алам. " +
-                        "Баскыч скрипттердин кийиндиги жок, кичине абалдуу веб-колдонмолорга чейинки. Өзүмдүн жеңиштерин практикалаштырма жана жеткиликтүү билимдерин жеткиликтүү этилүүгө багыт кылган сапатын көрсөтөт."
+                        "Баскыч скрипттердин кийиндиги жок, кичине абалдуу веб-колдонмолорга чейинки. Өзүмдүн жеңиштерин практикалаштырма жана жеткиликтүү билимдерин жеткиликтүү этилүүгө багыт кылган сапатын көрсөтөт." +
+                        "Көрүүчүдүн көчүрмөсүн жана чоңойтолууга болот жеек көпчүлүгү менен. Бул библиотекаларсыз, чисто код менен колдонулгандыкта жасалган."
                 },
                 doppioCraft:{
                     header: 'Doppio Craft',
@@ -160,8 +162,8 @@ export const texts_kg = {
                     header: 'Fiteg',
                     noImageAlert: 'Анимациялар беттик көрүнүштү түзөтүп, суроолордон сайттын көрүнүшүн ачуу укугу болот. Көрүүдү көңүлдүңүз :)',
                     title: 'Fiteg copy',
-                    caption: "Менин көздүн катыштык проектим, лейаут боюнча. Бул дизайн катар аткаруучу компаниялардын бардыктык алдында чыгарылган. " +
-                        "Бул тажрибе менчиктүү менин катышуу менен анимацияларды жасоо багытын көбүрөөк маңыздыкты. Кыймыл анимациялар фотоараларды аркылуу веб-сайттын көрүнүшүн анын аны кайрап алуу. Алдындагы чиркени алдын алуу баскычына басып, көрүңүз жана бирок чыгыңыз :)"
+                    caption: "Баардык кирүү системасындагы эң ачык жумушум. Анын аталымынан тартышкан компания. Бул веб-сайт толук жасалган, стилизациялоо китептери колдонулган жок, " +
+                        "менин кирүү менен анимация кабарлуулугумду көрсөтөт. Анимациялар веб-сайтты жандырат, фотодон бөлүшүлбөйт. Веб-сайтты жеке караңыз, төмөнкү баскы басып."
                 },
                 miniApps:{
                     header: 'Менин баракчаларым',
@@ -242,7 +244,8 @@ export const texts_en = {
                     header: "Portfolio",
                     title: "Portfolio",
                     caption: "Here are my small practical tasks, created during the study of various technologies and programming languages. " +
-                        "From simple scripts to small web applications - each project reflects my experience and ability to apply acquired knowledge in practice."
+                        "From simple scripts to small web applications - each project reflects my experience and ability to apply acquired knowledge in practice." +
+                    "I would like to note that each of my photos on this website is clickable and can be enlarged. This is done with clean code manually, without libraries."
                 },
                 doppioCraft:{
                     header: "Doppio Craft",
@@ -253,8 +256,9 @@ export const texts_en = {
                 fitegCopy:{
                     header: "Fiteg",
                     title: "Fiteg copy",
-                    caption: "My best project in terms of layout. This design is inspired by an existing company with the same name. " +
-                        "And this experience was very important for improving my layout and animation skills. Some details were changed at my discretion. The presence of animations makes it difficult to convey the appearance of the site through photos. Click the button below and enjoy the view in person :)"
+                    caption: 'My best project in the field of web development, inspired by a company of the same name. This website is entirely handcrafted, ' +
+                        'without the use of styling libraries, showcasing my skills in web design and animation. The animations bring the site to life, ' +
+                        'something not captured through photos. Take a look at the site yourself by clicking the button below.'
                 },
                 miniApps:{
                     header: "Mini programs",
