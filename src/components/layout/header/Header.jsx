@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import classes from './Header.module.sass';
 import Navigation from "../../other/navigation/Navigation";
 import {anchorsConfig} from "../../../configs/anchors";
