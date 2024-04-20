@@ -1,8 +1,7 @@
 {
   "files": {
     "main.css": "/my_portfolio_project/static/css/main.14bcae04.css",
-    "main.js": "/my_portfolio_project/static/js/main.9e7f1dcf.js",
-    "static/media/img.png": "/my_portfolio_project/static/media/img.23e17d08143ac90cd619.png",
+    "main.js": "/my_portfolio_project/static/js/main.5b949e58.js",
     "static/media/desktop.png": "/my_portfolio_project/static/media/desktop.a113922e600f275bb84e.png",
     "static/media/geektech_ru.JPG": "/my_portfolio_project/static/media/geektech_ru.ee7dc4e710544ab46979.JPG",
     "static/media/geektech_kg.JPG": "/my_portfolio_project/static/media/geektech_kg.e71463f94742fa7db0af.JPG",
@@ -17,6 +16,7 @@
     "static/media/noCode_me.jpg": "/my_portfolio_project/static/media/noCode_me.0426f1231b299964c636.jpg",
     "static/media/calculator.png": "/my_portfolio_project/static/media/calculator.f88a61329dcd9db42544.png",
     "static/media/weather.png": "/my_portfolio_project/static/media/weather.4d6eaab3d612e87092fa.png",
+    "static/media/me.jpg": "/my_portfolio_project/static/media/me.e6abce0d0c3db7fc03f6.jpg",
     "static/media/converter.png": "/my_portfolio_project/static/media/converter.b4cd307f530d2c3d4e66.png",
     "static/media/international.svg": "/my_portfolio_project/static/media/international.61ab28c9e149fff3ec081625095d567e.svg",
     "static/media/telegram.svg": "/my_portfolio_project/static/media/telegram.d5f4f853c0f8736804336393d9c38530.svg",
@@ -24,10 +24,10 @@
     "static/media/whatsapp.svg": "/my_portfolio_project/static/media/whatsapp.eb46d263ab91f1242cb74ad50ea4acf1.svg",
     "index.html": "/my_portfolio_project/index.html",
     "main.14bcae04.css.map": "/my_portfolio_project/static/css/main.14bcae04.css.map",
-    "main.9e7f1dcf.js.map": "/my_portfolio_project/static/js/main.9e7f1dcf.js.map"
+    "main.5b949e58.js.map": "/my_portfolio_project/static/js/main.5b949e58.js.map"
   },
   "entrypoints": [
     "static/css/main.14bcae04.css",
-    "static/js/main.9e7f1dcf.js"
+    "static/js/main.5b949e58.js"
   ]
 }
