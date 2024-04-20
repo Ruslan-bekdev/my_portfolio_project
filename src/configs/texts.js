@@ -109,7 +109,7 @@ export const texts_kg = {
             links: {
               about: 'Мен тууралуу',
               projects: 'Проекттер',
-              contacts: 'Байланыш',
+              contacts: 'Байланыштар',
             },
         },
         landing: {
@@ -117,73 +117,80 @@ export const texts_kg = {
             h1: ['Мен', 'Русланбекмин'],
             h2: 'Front-End Разработчик',
             p: [
-                'Кыргызстандан катаган жеткиликтүү веб-өнөктөш, иштебаасыз.',
-                'Веб проекттерди түзөтүүгө жүрүштүүнө жатам, бул менин портфолиом'
+                'Иш тажрыйбасы жок Кыргызстандан башталгыч веб-иштеп чыгуучу.',
+                'Мен веб-долбоорлорду түзүү боюнча машыгып жатам жана бул менин Портфолио.'
             ],
-            skillsTitle: 'Менин жеткиликтерим:'
+            skillsTitle: 'Менин жөндөмдөрүм:'
         },
         about: {
-            title: 'Мен туралуу кыскача',
+            title: 'Мен туралуу кыскача:',
             geekTech: {
                 images: [geekTech_kg, geekTech_me],
-                title: 'GeekTech (Geeks) да окуу',
-                caption: ['Мендүү IT саласына кирүүм GeekTech (Бугунгү күнө Geeks). Полгекте мен базалык навактарды, билимдерди манасы жана бул мамлекетте менин биринчи тажрыйбамды алдым. ' +
-                    'Окуга жана окуудан кийин мен кандай жеңил учуучуларга ментор болдум жана ашык темаларды жандырабым.',
-                    'Мен бул мүмкүнчүлүгү үчүн GeekTechке күтүлгөн боломмун. Рахмат!'],
-                figcaption: '3 тилдеги варианттар жеткиликтүү. Сайттын тилин өзгөртүңүз, башкаларды көрсөңүз',
+                title: 'GeekTech-те (Geeks) окуу',
+                caption: [
+                    'Менин IT тармагына болгон сапарым GeekTech (учурда Geeks) менен башталды. Алты айдын ичинде мен негизги көндүмдөрдү, билимдерди өздөштүрүп, бул жаатта биринчи тажрыйбамды алдым. ' +
+                    'Окуу учурунда жана андан кийин мен тарбиячы (ментор) болуп да иштедим жана кыйналган студенттерге татаал темаларды өздөштүрүүсүнө жардам бердим.',
+                    'Мен GeekTech компаниясына бул мүмкүнчүлүк үчүн ыраазымын. Рахмат!'],
+                figcaption: 'Үч тилде бар. Башкаларды көрүү үчүн сайттын тилин өзгөртүңүз',
             },
             noCode: {
                 images: [noCode_me, noCode],
-                title: 'Muras Academyда окуу',
-                caption: ['GeekTechдеги окуудан кийин мен болдук бирок мен окууга жакшы бир жол табдым. Жаңы темаларды самакчы көчүп жаткан жок болгондо. ' +
-                    'Бир жана туруктагы боюнча кантип-кандай темаларды окууга жакшы бир жол табдым. Бул маанада мен No-Code программалоо мамлекетинде окуу алгандым.',
-                    'No-Code программалоо бул код жазбаган болгону менен тым жакшы аракеттердин мамлекетинде программалоо болуп саналат. ' +
-                    'Бул кызыктуу тажрыйба менен мени катуу темаларды манасы жакшы мүмкүндүктөр менен түшүнүштү. Бул чыгармада веб дизайнды меңгерүүдө эле жакшы көмөгүм болду.'],
+                title: 'Muras Academy-да окуу',
+                caption: [
+                    'GeekTech аяктагандан кийин, мен ушуну менен токтоп калган жокмун. Жаңы темаларды өз алдынча үйрөнө баштадым. ' +
+                    'Бир багыт менен чектелбестен, ар кандай багыттарды изилдедим. Бул мени кодсуз программалоо боюнча адистештирүүмө алып келди.',
+                    'Кодсуз программалоо, негизинен, визуалдык редактор интерфейсин колдонуу менен код жазуусуз программаларды түзүү дегенди билдирет. ' +
+                    'Бул тажрыйба мага жаңы темаларды түшүнүүгө чоң жардам берди жана веб-дизайн көндүмдөрүн өздөштүрүүдө негизги ролду ойноду.'
+                ],
             },
         },
         projects: {
             title: 'Менин проектерим',
-            caption: 'Экинчи жактан менин эң кызыктуу пет-проекттерим менчек аныктамалар менен жана сүрөттөмөлөр менен көрсөтүлгөн. ' +
-                'Бунун жана коддогу Логика мен Жабдуулардын үлгүлөрүнү көрсөтүү диаграмма бар. Акыркы жерде, проектте колдонулган башка технологиялардын тизмеси берилген. ' +
-                'Акыркыда эки баскыч бар: бири, проект сайтына өтүүгө уруксат берет, жана башкасы - менин Github шаалымдагы шаалымды жана артка кодду көрө аласыздар, жакшы.',
+            caption: 'Бул жерде толук сүрөттөлүшү жана сүрөттөрү менен менин мыкты пет проектерим бар. ' +
+                'Ошондой эле коддо Логика менен Макеттин ортосундагы байланышты чагылдырган диаграмма бар. ' +
+                'Төмөндө долбоордо колдонулган негизги технологиялардын тизмеси келтирилген. ' +
+                'Жана аягында 2 баскыч бар: бири долбоордун веб-сайтына өтүүгө мүмкүндүк берет, ' +
+                'жана экинчиси менин жеке GitHub репозиторийине баруу, анда сиз долбоордун бардык кодун көрө аласыз',
             content: {
                 portfolio:{
-                    header: "Портфолио",
-                    title: "Портфолио",
-                    caption: "Бул жерде мен өз сабактык технологияларды жана программалоо тилилерин көргөзүү аясында жасалган менчек көз тапкырларды көрсөтө алам. " +
-                        "Баскыч скрипттердин кийиндиги жок, кичине абалдуу веб-колдонмолорга чейинки. Өзүмдүн жеңиштерин практикалаштырма жана жеткиликтүү билимдерин жеткиликтүү этилүүгө багыт кылган сапатын көрсөтөт." +
-                        "Көрүүчүдүн көчүрмөсүн жана чоңойтолууга болот жеек көпчүлүгү менен. Бул библиотекаларсыз, чисто код менен колдонулгандыкта жасалган."
+                    header: 'Портфолио',
+                    title: 'Портфолио',
+                    caption: 'Бул жерде ар кандай технологияларды жана программалоо тилдерин үйрөнүү процессинде түзүлгөн менин кичинекей практикалык тапшырмаларым. ' +
+                        'Жөнөкөй скрипттерден баштап кичинекей веб-тиркемелерге чейин ар бир долбоор менин тажрыйбамды жана алган билимимди иш жүзүндө колдонуу жөндөмүмдү чагылдырат. ' +
+                        'Бул сайттагы менин сүрөттөрүмдүн ар бири чыкылдатылып, чоңойтсо болот деп белгилегим келет. Бул китепканаларсыз кол менен таза код менен жасалат.',
                 },
                 doppioCraft:{
                     header: 'Doppio Craft',
                     title: 'Doppio Craft',
-                    caption: "Менин жеңишкөр пет проектим, мен маалыматтардын каталогу менен иштөөдө көрсөтүүм. Дизайнга абал берилген жок, бирок мен натыйжасы менен анын өзүмдүн ичинде тийиндилгенмин."
+                    caption: 'Менин биринчи пет проектим, анда мен продукт каталогу менен иштөөнү үйрөндүм. Бул жерде дизайнга катуу басым жасалган жок, бирок мен дагы эле натыйжага абдан ыраазымын.'
                 },
                 fitegCopy:{
                     header: 'Fiteg',
                     noImageAlert: 'Анимациялар беттик көрүнүштү түзөтүп, суроолордон сайттын көрүнүшүн ачуу укугу болот. Көрүүдү көңүлдүңүз :)',
                     title: 'Fiteg copy',
-                    caption: "Баардык кирүү системасындагы эң ачык жумушум. Анын аталымынан тартышкан компания. Бул веб-сайт толук жасалган, стилизациялоо китептери колдонулган жок, " +
-                        "менин кирүү менен анимация кабарлуулугумду көрсөтөт. Анимациялар веб-сайтты жандырат, фотодон бөлүшүлбөйт. Веб-сайтты жеке караңыз, төмөнкү баскы басып."
-                },
+                    caption: 'Менин эң мыкты дизайн долбоорум, ошол эле аталыштагы компаниянын шыктандыруусу. Бул сайт толугу менен кол менен жазылган, '+
+                        'Стилдөө үчүн китепканаларды колдонбостон, бул менин макет жана анимация жөндөмүмдү эң сонун көрсөтөт.' +
+                        'Анимациялар сайтты сүрөттөр аркылуу эмес, жандуу кылат. Төмөнкү баскычты чыкылдатуу менен сайтты өзүңүз карап көрүңүз.',
+},
                 miniApps:{
-                    header: 'Менин баракчаларым',
+                    header: 'Мини программалар',
                     title: 'Mini-Apps',
-                    caption: "Лейаут боюнча менин жеңишкөр пет-проектим, үмүттө. Бул, көптөгөн жүзгү болуп, жаңы приложениялар менен өнүүлүп чыкат. " +
-                        "Бул проект Type Script деген жаңы жана менчикке жөнөтүү тилинде жазылган. Бул менен практика жарашалып, анын ыңгай болгондукун көрсөттү жана ал кем де жеңил эмес эле."
+                    caption: 'Макетин эмес, логика жагынан менин эң мыкты пет-проектим. Ал дайыма жаңы тиркемелер менен толукталат. ' +
+                        'Бул долбоор Type Script менен жазылган, мен үчүн жаңы тил. Аны менен машыгуу пайдалуу болду жана анын канчалык ыңгайлуу экенин көрсөттү, бирок ошол эле учурда оңой эмес.'
                 },
                 topTalent:{
                     header: 'Top Talent (no-code)',
                     title: 'Top Talent company',
-                    caption: "Топ биле - бул менин абдан эксперименталдуу биринчи пет-проектим, no-code технологиясын колдонуу аркылуу жасалган. " +
-                        "Бул тажрибе менчиктүү менин креативдүүлүк, фантазия мен дизайнге кызмат кылган башка көзгө баткычтарды колдонууга өтүлүп, программалаштыруу көзгө алууга өткөн жок. Мөчүлүк, программалаштуу жок, бул проекттин жаратуу үчүн HTML жана CSS катарында гипертексттөөлөштүрүү жана стилизация тилин колдонулду."
+                    caption: 'Top Talent - кодсуз технологияны колдонуу менен иштелип чыккан менин биринчи пет-проектим. Бул тажрыйба мен үчүн өтө эксперименталдык болду жана башкалардан өзгөчөлөндү. ' +
+                        'Долбоордо код жок, бирок аны түзүү үчүн мен чыгармачылык, фантазия жана дизайн сыяктуу башка маанилүү көндүмдөрдү колдонууга туура келди. ' +
+                        'Мындан тышкары, программалоонун жоктугуна карабастан, бул долбоор гипертекстти белгилөө жана стилдөө тилдерин - HTML жана CSS колдонууну талап кылды.'
                 }
             },
             pie: ['Верстка','Логика'],
             action: 'Көрүү',
         },
         contacts: {
-            title: 'Менин контакттарым',
+            title: 'Менин байланыштарым',
             actions: {
                 whatsApp: 'Ватсап',
                 telegram: 'Телеграм',
@@ -242,37 +249,37 @@ export const texts_en = {
                 'one allows you to go to the project website, and the other - to go to my personal GitHub repository, where you can see all the project code.',
             content: {
                 portfolio:{
-                    header: "Portfolio",
-                    title: "Portfolio",
-                    caption: "Here are my small practical tasks, created during the study of various technologies and programming languages. " +
-                        "From simple scripts to small web applications - each project reflects my experience and ability to apply acquired knowledge in practice." +
-                    "I would like to note that each of my photos on this website is clickable and can be enlarged. This is done with clean code manually, without libraries."
+                    header: 'Portfolio',
+                    title: 'Portfolio',
+                    caption: 'Here are my small practical tasks, created during the study of various technologies and programming languages. ' +
+                        'From simple scripts to small web applications - each project reflects my experience and ability to apply acquired knowledge in practice.' +
+                    'I would like to note that each of my photos on this website is clickable and can be enlarged. This is done with clean code manually, without libraries.'
                 },
                 doppioCraft:{
-                    header: "Doppio Craft",
-                    title: "Doppio Craft",
-                    caption: "My first pet project, where I practiced working with a product catalog. There wasn't a strong emphasis on design here, " +
-                        "but I am still very happy with the result."
+                    header: 'Doppio Craft',
+                    title: 'Doppio Craft',
+                    caption: 'My first pet project, where I practiced working with a product catalog. There wasn\'t a strong emphasis on design here, ' +
+                        'but I am still very happy with the result.'
                 },
                 fitegCopy:{
-                    header: "Fiteg",
-                    title: "Fiteg copy",
+                    header: 'Fiteg',
+                    title: 'Fiteg copy',
                     caption: 'My best project in the field of web development, inspired by a company of the same name. This website is entirely handcrafted, ' +
                         'without the use of styling libraries, showcasing my skills in web design and animation. The animations bring the site to life, ' +
                         'something not captured through photos. Take a look at the site yourself by clicking the button below.'
                 },
                 miniApps:{
-                    header: "Mini programs",
-                    title: "Mini-Apps",
-                    caption: "My best pet project in terms of logic rather than layout. It will constantly be updated with new applications. " +
-                        "This project is written in Type Script, a new language for me. Practice with it was useful and showed how convenient it is, but at the same time not easy."
+                    header: 'Mini programs',
+                    title: 'Mini-Apps',
+                    caption: 'My best pet project in terms of logic rather than layout. It will constantly be updated with new applications. ' +
+                        'This project is written in Type Script, a new language for me. Practice with it was useful and showed how convenient it is, but at the same time not easy.'
                 },
                 topTalent:{
-                    header: "Top Talent (no-code)",
-                    title: "Top Talent company",
-                    caption: "Top Talent - my first pet project developed using no-code technology. This experience was extremely experimental for me and stands out among the others. " +
-                        "There is no code in the project, but to create it, I had to apply other important skills such as creativity, imagination, and design. " +
-                        "In addition, despite the absence of programming, this project required the use of markup and styling languages - HTML and CSS."
+                    header: 'Top Talent (no-code)',
+                    title: 'Top Talent company',
+                    caption: 'Top Talent - my first pet project developed using no-code technology. This experience was extremely experimental for me and stands out among the others. ' +
+                        'There is no code in the project, but to create it, I had to apply other important skills such as creativity, imagination, and design. ' +
+                        'In addition, despite the absence of programming, this project required the use of markup and styling languages - HTML and CSS.'
                 }
             },
             pie: ['Markup','Logic'],
