@@ -4,6 +4,8 @@ import classes from './MainPage.module.css';
 const MainPage = () => {
     const cardTopPosition = 60;
     const cardMargin = 20;
+    const backAnimationSpeed = 1800;
+    const titleAnimationSpeed = backAnimationSpeed/10;
     const [title,setTitle] = useState('ГЛАВНАЯ');
     const [activeCardIndex, setActiveCardIndex] = useState(0);
     const [intervalId, setIntervalId] = useState(null);
@@ -41,7 +43,7 @@ const MainPage = () => {
                 const nextChar = titleTexts[bodyBackgroundIndex][prevTitle.length];
                 return prevTitle + nextChar;
             });
-        }, 100);
+        }, titleAnimationSpeed);
     };
     const startInterval = () => {
         if (!intervalId) {
@@ -49,7 +51,7 @@ const MainPage = () => {
             handleNextBodyBack();
             const id = setInterval(() => {
                 handleNextBodyBack();
-            }, 2000);
+            }, backAnimationSpeed);
             setIntervalId(id);
             startTitleAnimation();
         }
@@ -96,7 +98,7 @@ const MainPage = () => {
         return () => {
             window.addEventListener('scroll', handleShowActiveText);
         }
-    },[])
+    },[]);
     useEffect(()=>{
         startTitleAnimation();
     },[bodyBackgroundIndex]);

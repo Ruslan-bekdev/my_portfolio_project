@@ -3,17 +3,18 @@ import React from "react";
 import {Route, Routes} from "react-router-dom";
 import Header from "./compnents/specific/layout/header/Header";
 import Footer from "./compnents/specific/layout/footer/Footer";
+
 import {
     MainPage,
     ProductPage,
     TodosPage,
     UsersPage,
-    ClassPage,
     NotFoundPage,
 
     AboutUser,
     AboutProduct,
 } from './pages/index';
+import Sandbox from "./pages/sandbox/Sandbox";
 
 export const pagesConfig = {
     main:{
@@ -44,10 +45,10 @@ export const pagesConfig = {
             element: <AboutUser/>,
         },
     },
-    class:{
-        path:'/class',
-        element:<ClassPage/>,
-        title:'Class',
+    sandbox: {
+        path: '/sandbox',
+        element: <Sandbox/>,
+        title: 'Sandbox',
     },
     notFound:{
         path:'*',
