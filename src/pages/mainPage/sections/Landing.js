@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from '../MainPage.module.sass';
-import myPhoto from '../../../assets/images/img.png'
+import myPhoto from '../../../assets/images/img.jpg';
 import ZoomableImage from "../../../components/other/zoomableImage/ZoomableImage";
 import TooltipedImage from "../../../components/other/tooltopedImage/TooltipedImage";
 
