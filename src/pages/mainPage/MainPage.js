@@ -34,7 +34,19 @@ const MainPage = () => {
     if (!textReducer.language)
         return <></>;
 
-    return (
+	useEffect(()=>{
+		const langData = getLanguageFromLocalStorage();
+		console.log('Loaded language from localStorage:', langData);
+		dispatch(setDefaultLanguage(langData));
+	},[]);
+
+	useEffect(() => {
+		console.log('textReducer updated:', textReducer);
+		textReducer.language && saveLanguageToLocalStorage();
+	}, [textReducer.language]);
+
+
+	return (
         <Fragment>
             <Header
                 language={textReducer.language}
