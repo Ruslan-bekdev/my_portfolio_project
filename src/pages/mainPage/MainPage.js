@@ -31,8 +31,6 @@ const MainPage = () => {
         textReducer.language && saveLanguageToLocalStorage();
     }, [textReducer.language]);
 
-    if (!textReducer.language)
-        return <></>;
 
 	useEffect(()=>{
 		const langData = getLanguageFromLocalStorage();
@@ -45,6 +43,8 @@ const MainPage = () => {
 		textReducer.language && saveLanguageToLocalStorage();
 	}, [textReducer.language]);
 
+    if (!textReducer.language)
+        return <></>;
 
 	return (
         <Fragment>
