@@ -2,7 +2,8 @@
 @import "src/styles/variables"
 
 .main
-    >*
+    position: relative
+    section
       min-height: $section-vh
       @include flex-center
       box-sizing: border-box
@@ -31,6 +32,8 @@
         padding-inline: 8px
     p
       margin-block: 20px
+      >small
+        margin-block: 30px
 
     .skills
       &__title
@@ -44,6 +47,8 @@
 
       &__images
         margin-top: 10px
+        >img:not(:first-of-type)
+          margin-left: 8px
 
   &__image
     width: auto

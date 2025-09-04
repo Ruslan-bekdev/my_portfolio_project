@@ -20,18 +20,16 @@ export const texts_ru = {
             h3: 'Привет!',
             h1: ['Я', 'Русланбек'],
             h2: 'Front-End Разработчик',
-            p: [
-                'Начинающий веб разработчик из Кыргызстана без опыта работы.',
-                'Практикуюсь в создании веб проектов и вот мое Портфолио.'
-            ],
-            skillsTitle: 'Мои навыки'
+            p: 'Учусь делать веб-проекты и собираю своё портфолио',
+	        small: 'Сайт сделан простенько, без лишностей чтобы сохранить основную цель - рассказать о себе.',
+            skillsTitle: 'Мои основные навыки'
         },
         about: {
             title: 'Коротко о себе:',
             geekTech: {
                 images: [geekTech_ru,geekTech_me],
                 title: 'Обучение в GeekTech (Geeks)',
-                caption: ['Мой путь в сферу IT начался с GeekTech (Geeks на данный момент). За полгода я освоил базовые навыки, знаниям и получил свой первый опыт в этой области. ' +
+                caption: ['Мой путь в сферу IT начался с GeekTech (Geeks на данный момент). За полгода я освоил базовые навыки и получил свой первый опыт в IT.' +
                     'Во время и после обучения я также подрабатывал в качестве наставника (был ментором) и помогал непоспевающим ученикам освоить сложные темы.',
                     'Я благодарен GeekTech за такую возможность. Спасибо!'],
                 figcaption: 'Доступны варианты на трёх языках. Измените язык сайта, чтобы увидеть другие',
@@ -42,12 +40,13 @@ export const texts_ru = {
                 caption: ['После окончания обучения в GeekTech я не остановился на достигнутом. Я начал самостоятельно изучать новые темы. ' +
                     'Не ограничиваясь одним направлением, я изучал разнообразные области. Это привело меня к специализации в области программирования без кода (No-Code).',
                     'Программирование без кода по сути означает создание программ без написания кода, используя визуальный интерфейс редактора. ' +
-                    'Этот опыт значительно помог мне в понимании абсолютно новых для меня тем и играл ключевую роль в освоении навыков веб-дизайна.'],
+                    'Этот опыт сильно помог мне разобраться в новых для меня темах и освоить веб-дизайн.'],
             },
         },
         projects: {
             title: 'Мои проекты',
-            caption: 'Здесь представлены мои лучшие пет-проекты с подробными описаниями и фотографиями. ' +
+            caption: 'После учёбы на курсах я не останавливался и почти всё это время практиковался и изучал новые инструменты, создавая свои Пет Проекты' +
+	            'Здесь представлены мои лучшие пет-проекты с подробными описаниями и фотографиями. ' +
                 'Также есть диаграмма, иллюстрирующая соотношение Логики и Верстки в коде. ' +
                 'Ниже приведен список основных технологий, использованных в проекте. ' +
                 'И в конце размещены 2 кнопки: одна позволяет перейти на сайт проекта, ' +
@@ -63,7 +62,7 @@ export const texts_ru = {
                 doppioCraft:{
                     header: 'Doppio Craft',
                     title: 'Doppio Craft',
-                    caption: 'Мой первый пет-проект, в котором я практиковался работать с каталогом товаров. Сильного упора в дизайн здесь не было, но я все равно очень доаволен результатом',
+                    caption: 'Мой первый пет-проект, в котором я практиковался работать с каталогом товаров. Сильного упора в дизайн не было, но зато я получил хороший опыт работы с данными и вёрсткой',
                 },
                 fitegCopy:{
                     header: 'Fiteg copy',
@@ -72,10 +71,18 @@ export const texts_ru = {
                         'без использования библиотек для стилизации, что отлично показывает мои навыки верстки и анимации.' +
                         'Анимации делают сайт живым, не передаваемым через фото. Посмотрите на сайт лично, нажав на кнопку ниже.',
                 },
+                solarSystem:{
+                    header: 'Солнечная система',
+                    title: 'Солнечная система',
+                    caption: 'Изначальная цель этого проекта сделать кейс полностью не похожий на дургие мои сайты.' +
+	                    'При этом практикуя работу с 3D, анимациями и в принципе пробуя больше инструментов.' +
+	                    'Также на прятежении всей разработки сайта я решил научиться работать совместно с чатботом - ChatGPT.' +
+	                    'С точки зрения обычного пользователя, сайт просто показывает макет Солнечной системы и немного рассказывает о планетах.'
+                },
                 miniApps:{
                     header: 'Мини программы',
                     title: 'Mini-Apps',
-                    caption: 'Мой лучший пет-проект в плане логики, нежели верстки. Он постоянно будет обновляется новыми приложениями. ' +
+                    caption: 'Мой лучший пет-проект в плане логики, нежели верстки. Он будет постоянно обновляться новыми приложениями. ' +
                         'Этот проект написан на Type Script, новом для меня языке. Практика с ним была полезной и показала, насколько же он удобен, но в то же время непрост',
                 },
                 topTalent:{
@@ -116,18 +123,16 @@ export const texts_kg = {
             h3: 'Салам!',
             h1: ['Мен', 'Русланбекмин'],
             h2: 'Front-End Разработчик',
-            p: [
-                'Кыргызстандан катаган жеткиликтүү веб-өнөктөш, иштебаасыз.',
-                'Веб проекттерди түзөтүүгө жүрүштүүнө жатам, бул менин портфолиом'
-            ],
-            skillsTitle: 'Менин жеткиликтерим:'
+            p: 'Веб-проекттерди жасоону үйрөнүп жатам жана өз портфолиомду топтойм.',
+	        small: 'Сайт жөнөкөй кылып жасалган, керексиз нерселер жок, негизги максатты сактоо үчүн - өзүм тууралуу айтып берүү.',
+            skillsTitle: 'Менин негизги жеткиликтерим:'
         },
         about: {
             title: 'Мен туралуу кыскача',
             geekTech: {
                 images: [geekTech_kg, geekTech_me],
                 title: 'GeekTech (Geeks) да окуу',
-                caption: ['Мендүү IT саласына кирүүм GeekTech (Бугунгү күнө Geeks). Полгекте мен базалык навактарды, билимдерди манасы жана бул мамлекетте менин биринчи тажрыйбамды алдым. ' +
+                caption: ['Мендүү IT саласына кирүүм GeekTech (Бугунгү күнө Geeks). Жарым жылдын ичинде мен негизги көндүмдөрдү өздөштүрдүм жана IT тармагында биринчи тажрыйбамды алдым.' +
                     'Окуга жана окуудан кийин мен кандай жеңил учуучуларга ментор болдум жана ашык темаларды жандырабым.',
                     'Мен бул мүмкүнчүлүгү үчүн GeekTechке күтүлгөн боломмун. Рахмат!'],
                 figcaption: '3 тилдеги варианттар жеткиликтүү. Сайттын тилин өзгөртүңүз, башкаларды көрсөңүз',
@@ -143,7 +148,8 @@ export const texts_kg = {
         },
         projects: {
             title: 'Менин проектерим',
-            caption: 'Экинчи жактан менин эң кызыктуу пет-проекттерим менчек аныктамалар менен жана сүрөттөмөлөр менен көрсөтүлгөн. ' +
+            caption: 'Курстардын окуусунан кийин токтобой, дээрлик бардык убактымды практика менен жаңы куралдарды үйрөнүүгө жана өзүмдүн Пет Проекттеримди түзүүгө жумшадым.' +
+	            'Экинчи жактан менин эң кызыктуу пет-проекттерим менчек аныктамалар менен жана сүрөттөмөлөр менен көрсөтүлгөн. ' +
                 'Бунун жана коддогу Логика мен Жабдуулардын үлгүлөрүнү көрсөтүү диаграмма бар. Акыркы жерде, проектте колдонулган башка технологиялардын тизмеси берилген. ' +
                 'Акыркыда эки баскыч бар: бири, проект сайтына өтүүгө уруксат берет, жана башкасы - менин Github шаалымдагы шаалымды жана артка кодду көрө аласыздар, жакшы.',
             content: {
@@ -157,7 +163,7 @@ export const texts_kg = {
                 doppioCraft:{
                     header: 'Doppio Craft',
                     title: 'Doppio Craft',
-                    caption: "Менин жеңишкөр пет проектим, мен маалыматтардын каталогу менен иштөөдө көрсөтүүм. Дизайнга абал берилген жок, бирок мен натыйжасы менен анын өзүмдүн ичинде тийиндилгенмин."
+                    caption: "Менин биринчи пет-проектим, анда мен товарлар каталогун менен иштөөнү практика кылдым. Дизайнга чоң басым болгон жок, бирок маалыматтар менен верстка боюнча жакшы тажрыйба алдым."
                 },
                 fitegCopy:{
                     header: 'Fiteg',
@@ -166,6 +172,14 @@ export const texts_kg = {
                     caption: "Баардык кирүү системасындагы эң ачык жумушум. Анын аталымынан тартышкан компания. Бул веб-сайт толук жасалган, стилизациялоо китептери колдонулган жок, " +
                         "менин кирүү менен анимация кабарлуулугумду көрсөтөт. Анимациялар веб-сайтты жандырат, фотодон бөлүшүлбөйт. Веб-сайтты жеке караңыз, төмөнкү баскы басып."
                 },
+	            solarSystem:{
+		            header: 'Күн Системасы',
+		            title: 'Күн Системасы',
+		            caption: 'Бул долбоордун баштапкы максаты — толугу менен башка менин сайттарымдан айырмаланган кейс түзүү.' +
+			            'Андан тышкары, мен 3D, анимациялар менен иштөөнү практика кылып, башка көптөгөн куралдарды колдонуп көрдүм.' +
+			            'Сайтты түзүү учурунда мен чатбот — ChatGPT менен иштөөнү үйрөнүүнү чечтим.' +
+			            'Адистешпеген колдонуучунун көз карашынан алганда, сайт жөн гана Күн системасынын макетин көрсөтөт жана планеталар тууралуу аз гана маалымат берет.',
+	            },
                 miniApps:{
                     header: 'Менин баракчаларым',
                     title: 'Mini-Apps',
@@ -209,18 +223,16 @@ export const texts_en = {
             h3: 'Hello!',
             h1: ['I\'m a', 'Ruslanbek'],
             h2: 'Front-End Developer',
-            p: [
-                'An aspiring web developer from Kyrgyzstan without experience.',
-                'Practicing web project creation, here is my Portfolio.'
-            ],
-            skillsTitle: 'My skills'
+            p: 'I am learning to create web projects and building my portfolio.',
+	        small: 'The website is simple, without unnecessary elements, to keep the main goal — telling about myself.',
+            skillsTitle: 'My main skills'
         },
         about: {
             title: 'About me',
             geekTech: {
                 images: [geekTech_en, geekTech_me],
                 title: 'Learning at GeekTech (Geeks)',
-                caption: ['My journey into the IT field began with GeekTech (currently Geeks). Over six months, I acquired basic skills, knowledge, and gained my first experience in this field. ' +
+                caption: ['My journey into the IT field began with GeekTech (currently Geeks). In six months, I mastered the basic skills and gained my first experience in IT.' +
                 'During and after my training, I also worked as a mentor and helped struggling students master complex topics.',
                     'I am grateful to GeekTech for this opportunity. Thank you!'],
                 figcaption: 'Variants are available in three languages. Change the website language to see others.',
@@ -236,7 +248,8 @@ export const texts_en = {
         },
         projects: {
             title: 'My projects',
-            caption: 'Here are my best pet projects with detailed descriptions and photos. ' +
+            caption: 'After completing the courses, I didn’t stop — I spent almost all this time practicing, learning new tools, and creating my own pet projects.' +
+	            'Here are my best pet projects with detailed descriptions and photos. ' +
                 'Additionally, there is a diagram illustrating the ratio of Logic to Markup in the code. ' +
                 'Below is a list of the main technologies used in the project. At the end, there are two buttons: ' +
                 'one allows you to go to the project website, and the other - to go to my personal GitHub repository, where you can see all the project code.',
@@ -251,8 +264,7 @@ export const texts_en = {
                 doppioCraft:{
                     header: "Doppio Craft",
                     title: "Doppio Craft",
-                    caption: "My first pet project, where I practiced working with a product catalog. There wasn't a strong emphasis on design here, " +
-                        "but I am still very happy with the result."
+                    caption: "My first pet project, where I practiced working with a product catalog. There wasn’t a strong focus on design, but I gained good experience with data and layout."
                 },
                 fitegCopy:{
                     header: "Fiteg",
@@ -261,6 +273,14 @@ export const texts_en = {
                         'without the use of styling libraries, showcasing my skills in web design and animation. The animations bring the site to life, ' +
                         'something not captured through photos. Take a look at the site yourself by clicking the button below.'
                 },
+	            solarSystem:{
+		            header: 'Solar System',
+		            title: 'Solar System',
+		            caption: 'The main goal of this project was to create a case completely different from my other websites.' +
+			            'At the same time, I practiced working with 3D, animations, and explored various tools.' +
+			            'Throughout the development of the site, I decided to learn how to collaborate with a chatbot — ChatGPT.' +
+			            'From the perspective of a regular user, the site simply displays a model of the Solar System and gives a brief overview of the planets.',
+	            },
                 miniApps:{
                     header: "Mini programs",
                     title: "Mini-Apps",

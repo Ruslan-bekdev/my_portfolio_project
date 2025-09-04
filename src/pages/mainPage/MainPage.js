@@ -15,16 +15,14 @@ import {defaultLanguage} from "../../configs/texts";
 const MainPage = () => {
     const dispatch = useDispatch();
     const textReducer = useSelector(state => state.textReducer)
-    const setNextLanguageAction = () => {
-        dispatch(setNextLanguage());
-    };
-    const saveLanguageToLocalStorage = () => {
-        localStorage.setItem('portfolio-config', JSON.stringify(textReducer));
-    };
     const getLanguageFromLocalStorage = () => {
         const storedConfig = localStorage.getItem('portfolio-config');
         return storedConfig ?JSON.parse(storedConfig) :defaultLanguage;
     };
+    const saveLanguageToLocalStorage = () =>
+        localStorage.setItem('portfolio-config', JSON.stringify(textReducer));
+    const setNextLanguageAction = () =>
+        dispatch(setNextLanguage());
 
     useEffect(()=>{
         dispatch(setDefaultLanguage(getLanguageFromLocalStorage()));
@@ -33,9 +31,8 @@ const MainPage = () => {
         textReducer.language && saveLanguageToLocalStorage();
     }, [textReducer.language]);
 
-    if (!textReducer.language) {
+    if (!textReducer.language)
         return <></>;
-    }
 
     return (
         <Fragment>
@@ -61,6 +58,13 @@ const MainPage = () => {
                     id='contacts'
                     text={textReducer.content.contacts}
                 />
+
+	            {/*Секретная личная ссылка, не влияет на работу сайта*/}
+	            <a
+		            href="https://ruslan-bekdev.github.io/codenote/"
+		            style={{width: '4vh', aspectRatio: 1, position: "absolute", left: 0, bottom: 0}}
+		            aria-label="codenote"
+	            />
             </main>
         </Fragment>
     );

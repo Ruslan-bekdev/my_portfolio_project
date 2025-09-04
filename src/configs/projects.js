@@ -10,6 +10,9 @@ import conventer from "../assets/images/projectsScreenshots/miniApps/converter.p
 import toptalentDesktop from "../assets/images/projectsScreenshots/toptalent/desktop.png";
 import toptalentMobile from "../assets/images/projectsScreenshots/toptalent/mobile.png";
 
+import jupiter from "../assets/images/projectsScreenshots/solarSystem/jupiter.png";
+import jupiterInShadow from "../assets/images/projectsScreenshots/solarSystem/jupiterInShadow.png";
+
 export const projectsConfig = {
     portfolio: {
         pie: [15,85],
@@ -33,6 +36,16 @@ export const projectsConfig = {
         icons: 'html,css,js,redux,styledcomponents',
         url: 'https://ruslan-bekdev.github.io/Fiteg-copy/',
         github: 'https://github.com/Ruslan-bekdev/Fiteg-copy',
+    },
+	solarSystem:{
+        pie: [85,15],
+        icons: 'html,less,js,threejs,vite,ai',
+		images: {
+			jupiter,
+			'Jupiter (shadow)': jupiterInShadow,
+		},
+        url: 'https://ruslan-bekdev.github.io/Solar-System-3D/',
+        github: 'https://github.com/Ruslan-bekdev/Solar-System-3D',
     },
     miniApps: {
         pie: [90,10],
