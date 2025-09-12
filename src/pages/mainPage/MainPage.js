@@ -10,29 +10,35 @@ import {
     setDefaultLanguage,
     setNextLanguage,
 } from "../../store/textSlice";
-import {defaultLanguage} from "../../configs/texts";
+import allTexts, {defaultLanguage} from "../../configs/texts";
 
 const MainPage = () => {
-    const dispatch = useDispatch();
-    const textReducer = useSelector(state => state.textReducer)
-    const getLanguageFromLocalStorage = () => {
-        const storedConfig = localStorage.getItem('portfolio-config');
-        return storedConfig ?JSON.parse(storedConfig) :defaultLanguage;
-    };
-    const saveLanguageToLocalStorage = () =>
-        localStorage.setItem('portfolio-config', JSON.stringify(textReducer));
-    const setNextLanguageAction = () =>
-        dispatch(setNextLanguage());
+	const dispatch = useDispatch();
+	const textReducer = useSelector(state => state.textReducer)
 
-    useEffect(()=>{
-        dispatch(setDefaultLanguage(getLanguageFromLocalStorage()));
-    },[]);
-    useEffect(() => {
-        textReducer.language && saveLanguageToLocalStorage();
-    }, [textReducer.language]);
+	const saveLanguageToLocalStorage = () =>
+		localStorage.setItem('portfolio-language', textReducer.language);
 
-    if (!textReducer.language)
-        return <></>;
+	const getLanguageFromLocalStorage = () => {
+		const storedLanguage = localStorage.getItem('portfolio-language');
+		return storedLanguage
+			? allTexts.find(text => text.language === storedLanguage) || defaultLanguage
+			: defaultLanguage;
+	};
+
+	const setNextLanguageAction = () =>
+		dispatch(setNextLanguage());
+
+	useEffect(()=>{
+		dispatch(setDefaultLanguage(getLanguageFromLocalStorage()));
+	},[]);
+
+	useEffect(() => {
+		textReducer.language && saveLanguageToLocalStorage();
+	}, [textReducer.language]);
+
+	if (!textReducer.language)
+		return <></>;
 
     return (
         <Fragment>
