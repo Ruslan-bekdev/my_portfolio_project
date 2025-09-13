@@ -6,8 +6,8 @@ import email from "../assets/icons/email.svg";
 export const contactsConfig = {
     links: [
         {
-            tel: '+996700526900',
-            label: '+996(700)526-900',
+            tel: '+996504004104',
+            label: '+996(504)004-104',
         },
         {
             tel: '+996225671567',
@@ -18,21 +18,21 @@ export const contactsConfig = {
             {
                 icon: whatsapp,
                 button:{
-                    url: 'https://wa.me/+996700526900',
+                    url: 'https://wa.me/+996225671567',
                     label: 'whatsApp',
                 }
             },
             {
                 icon: telegram,
                 button:{
-                    url: 'https://t.me/RuslanbekDev',
+                    url: 'https://t.me/RuslanBekdev',
                     label: 'telegram',
                 }
             },
             {
                 icon: email,
                 button:{
-                    url: 'mailto:ruslanDeveloper@gmail.com',
+                    url: 'mailto:ruslanbekdev@gmail.com',
                     label: 'eMail',
                 }
             },

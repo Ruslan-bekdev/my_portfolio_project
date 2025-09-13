@@ -45,7 +45,7 @@ export const texts_ru = {
         },
         projects: {
             title: 'Мои проекты',
-            caption: 'После учёбы на курсах я не останавливался и почти всё это время практиковался и изучал новые инструменты, создавая свои Пет Проекты' +
+            caption: 'После учёбы на курсах я не останавливался и почти всё это время практиковался и изучал новые инструменты, создавая свои Пет Проекты. ' +
 	            'Здесь представлены мои лучшие пет-проекты с подробными описаниями и фотографиями. ' +
                 'Также есть диаграмма, иллюстрирующая соотношение Логики и Верстки в коде. ' +
                 'Ниже приведен список основных технологий, использованных в проекте. ' +
@@ -148,7 +148,7 @@ export const texts_kg = {
         },
         projects: {
             title: 'Менин проектерим',
-            caption: 'Курстардын окуусунан кийин токтобой, дээрлик бардык убактымды практика менен жаңы куралдарды үйрөнүүгө жана өзүмдүн Пет Проекттеримди түзүүгө жумшадым.' +
+            caption: 'Курстардын окуусунан кийин токтобой, дээрлик бардык убактымды практика менен жаңы куралдарды үйрөнүүгө жана өзүмдүн Пет Проекттеримди түзүүгө жумшадым. ' +
 	            'Экинчи жактан менин эң кызыктуу пет-проекттерим менчек аныктамалар менен жана сүрөттөмөлөр менен көрсөтүлгөн. ' +
                 'Бунун жана коддогу Логика мен Жабдуулардын үлгүлөрүнү көрсөтүү диаграмма бар. Акыркы жерде, проектте колдонулган башка технологиялардын тизмеси берилген. ' +
                 'Акыркыда эки баскыч бар: бири, проект сайтына өтүүгө уруксат берет, жана башкасы - менин Github шаалымдагы шаалымды жана артка кодду көрө аласыздар, жакшы.',
@@ -248,7 +248,7 @@ export const texts_en = {
         },
         projects: {
             title: 'My projects',
-            caption: 'After completing the courses, I didn’t stop — I spent almost all this time practicing, learning new tools, and creating my own pet projects.' +
+            caption: 'After completing the courses, I didn’t stop — I spent almost all this time practicing, learning new tools, and creating my own pet projects. ' +
 	            'Here are my best pet projects with detailed descriptions and photos. ' +
                 'Additionally, there is a diagram illustrating the ratio of Logic to Markup in the code. ' +
                 'Below is a list of the main technologies used in the project. At the end, there are two buttons: ' +
