@@ -11,17 +11,17 @@ export const texts_ru = {
         header: {
             title: 'Язык',
             links: {
-              about: 'Обо мне',
-              projects: 'Проекты',
-              contacts: 'Контакты',
+                about: 'Обо мне',
+                projects: 'Проекты',
+                contacts: 'Контакты',
             },
         },
         landing: {
             h3: 'Привет!',
             h1: ['Я', 'Русланбек'],
             h2: 'Front-End Разработчик',
-            p: 'Учусь делать веб-проекты и собираю своё портфолио',
-	        small: 'Сайт сделан простенько, без лишностей чтобы сохранить основную цель - рассказать о себе.',
+            p: 'Создаю современные веб-интерфейсы, фокусируясь на чистоте кода и производительности.',
+            small: 'Портфолио разработано с использованием легких решений для обеспечения максимальной скорости загрузки.',
             skillsTitle: 'Мои основные навыки'
         },
         about: {
@@ -29,68 +29,60 @@ export const texts_ru = {
             geekTech: {
                 images: [geekTech_ru,geekTech_me],
                 title: 'Обучение в GeekTech (Geeks)',
-                caption: ['Мой путь в сферу IT начался с GeekTech (Geeks на данный момент). За полгода я освоил базовые навыки и получил свой первый опыт в IT.' +
-                    'Во время и после обучения я также подрабатывал в качестве наставника (был ментором) и помогал непоспевающим ученикам освоить сложные темы.',
-                    'Я благодарен GeekTech за такую возможность. Спасибо!'],
-                figcaption: 'Доступны варианты на трёх языках. Измените язык сайта, чтобы увидеть другие',
+                caption: ['Мой путь в IT начался с фундаментального обучения в GeekTech. За полгода я освоил базу Frontend-разработки и применил её в реальных задачах.' +
+                'В процессе обучения я также выступал в роли ментора, помогая студентам разбираться со сложными архитектурными темами и отладкой кода.',
+                    'Этот опыт научил меня не только писать код, но и эффективно объяснять технические концепции.'],
             },
             noCode: {
                 images: [noCode_me, noCode],
-                title: 'Обучение в Muras Academy',
-                caption: ['После окончания обучения в GeekTech я не остановился на достигнутом. Я начал самостоятельно изучать новые темы. ' +
-                    'Не ограничиваясь одним направлением, я изучал разнообразные области. Это привело меня к специализации в области программирования без кода (No-Code).',
-                    'Программирование без кода по сути означает создание программ без написания кода, используя визуальный интерфейс редактора. ' +
-                    'Этот опыт сильно помог мне разобраться в новых для меня темах и освоить веб-дизайн.'],
+                title: 'Развитие в Muras Academy',
+                caption: ['После курсов я продолжил углубляться в смежные области, включая специализированное обучение No-Code разработке. ' +
+                'Это позволило мне расширить взгляд на построение логики приложений и UX/UI дизайн.',
+                    'Опыт работы с визуальными редакторами помог мне быстрее прототипировать интерфейсы и глубже понять принципы адаптивности и семантики.'],
             },
         },
         projects: {
             title: 'Мои проекты',
-            caption: 'После учёбы на курсах я не останавливался и почти всё это время практиковался и изучал новые инструменты, создавая свои Пет Проекты. ' +
-	            'Здесь представлены мои лучшие пет-проекты с подробными описаниями и фотографиями. ' +
-                'Также есть диаграмма, иллюстрирующая соотношение Логики и Верстки в коде. ' +
-                'Ниже приведен список основных технологий, использованных в проекте. ' +
-                'И в конце размещены 2 кнопки: одна позволяет перейти на сайт проекта, ' +
-                'а другая - перейти в мой личный репозиторий на GitHub, где можно увидеть весь код проекта',
+            caption: 'В этом разделе представлены мои ключевые проекты, созданные с упором на практику новых технологий. ' +
+                'Для каждого кейса приведена диаграмма соотношения логики и верстки, а также подробный стек технологий. ' +
+                'Вы можете перейти к просмотру живой демо-версии или изучить исходный код в моем репозитории на GitHub.',
             content: {
                 portfolio:{
                     header: 'Портфолио',
                     title: 'Портфолио',
-                    caption: 'Здесь собраны мои небольшие практические задания, созданные в процессе изучения различных технологий и языков программирования. ' +
-                        'От простых скриптов до небольших веб-приложений - каждый проект отражает мой опыт и умение применять полученные знания на практике. ' +
-                        'Хотелось бы заметить, что каждая моя фотография на этом сайте кликабельна и умеет увеличиваться. Это сделано на чистом коде вручную без библиотек ',
+                    caption: 'Движок портфолио с кастомной логикой локализации и обработки изображений. ' +
+                        'Все модальные окна и функции увеличения фото реализованы на чистом JS без сторонних библиотек. ' +
+                        'Это демонстрирует мой навык создания легковесных и независимых решений для фронтенда.',
                 },
                 doppioCraft:{
                     header: 'Doppio Craft',
                     title: 'Doppio Craft',
-                    caption: 'Мой первый пет-проект, в котором я практиковался работать с каталогом товаров. Сильного упора в дизайн не было, но зато я получил хороший опыт работы с данными и вёрсткой',
+                    caption: 'Прототип интернет-магазина с динамическим каталогом товаров. В проекте отработана структура данных, ' +
+                        'методы фильтрации и принципы построения масштабируемой компонентной архитектуры.',
                 },
                 fitegCopy:{
                     header: 'Fiteg copy',
                     title: 'Fiteg copy',
-                    caption: 'Мой лучший проект в области верстки, вдохновленный одноименной компанией. Этот сайт написан полностью вручную, ' +
-                        'без использования библиотек для стилизации, что отлично показывает мои навыки верстки и анимации.' +
-                        'Анимации делают сайт живым, не передаваемым через фото. Посмотрите на сайт лично, нажав на кнопку ниже.',
+                    caption: 'Премиальный многостраничный сайт, созданный по принципу "Code-First". Ноль UI-библиотек - ' +
+                        'каждая сетка, переход и анимация прописаны вручную для достижения максимальной плавности и точности верстки.',
                 },
                 solarSystem:{
                     header: 'Солнечная система',
                     title: 'Солнечная система',
-                    caption: 'Изначальная цель этого проекта сделать кейс полностью не похожий на дургие мои сайты.' +
-	                    'При этом практикуя работу с 3D, анимациями и в принципе пробуя больше инструментов.' +
-	                    'Также на прятежении всей разработки сайта я решил научиться работать совместно с чатботом - ChatGPT.' +
-	                    'С точки зрения обычного пользователя, сайт просто показывает макет Солнечной системы и немного рассказывает о планетах.'
+                    caption: 'Интерактивная 3D-модель, сфокусированная на производительности отрисовки и работе с анимациями в пространстве. ' +
+                        'В ходе разработки я использовал продвинутый Prompt Engineering для оптимизации сложных структур данных и логики перемещения объектов.'
                 },
                 miniApps:{
                     header: 'Мини программы',
                     title: 'Mini-Apps',
-                    caption: 'Мой лучший пет-проект в плане логики, нежели верстки. Он будет постоянно обновляться новыми приложениями. ' +
-                        'Этот проект написан на Type Script, новом для меня языке. Практика с ним была полезной и показала, насколько же он удобен, но в то же время непрост',
+                    caption: 'Сборник приложений со сложной бизнес-логикой, написанный на TypeScript. Главная особенность - ' +
+                        'калькулятор с кастомным парсингом выражений и защитой от математических ошибок. Проект демонстрирует уверенное владение состоянием через Redux Toolkit.',
                 },
                 topTalent:{
                     header: 'Top Talent (no-code)',
                     title: 'Top Talent company',
-                    caption: 'Top Talent - мой первый пет-проект, разработанный с использованием no-code технологии. Этот опыт был для меня чрезвычайно экспериментальным и выделяется среди остальных. ' +
-                        'В проекте отсутствует код, но для его создания мне пришлось применить другие важные навыки, такие как творчество, фантазия и дизайн. ' +
-                        'Кроме того, несмотря на отсутствие программирования, для этого проекта потребовалось использовать языки гипертекстовой разметки и стилизации - HTML и CSS.',
+                    caption: 'Экспериментальный проект по созданию комплексной платформы без написания кода. ' +
+                        'Кейс подчеркивает мои навыки в дизайне, проектировании пользовательских путей и понимании структуры HTML/CSS вне зависимости от инструментов разработки.',
                 },
             },
             pie: ['Верстка','Логика'],
@@ -114,9 +106,9 @@ export const texts_kg = {
         header: {
             title: 'Тил',
             links: {
-              about: 'Мен тууралуу',
-              projects: 'Проекттер',
-              contacts: 'Байланыш',
+                about: 'Мен тууралуу',
+                projects: 'Проекттер',
+                contacts: 'Байланыш',
             },
         },
         landing: {
@@ -124,7 +116,7 @@ export const texts_kg = {
             h1: ['Мен', 'Русланбекмин'],
             h2: 'Front-End Разработчик',
             p: 'Веб-проекттерди жасоону үйрөнүп жатам жана өз портфолиомду топтойм.',
-	        small: 'Сайт жөнөкөй кылып жасалган, керексиз нерселер жок, негизги максатты сактоо үчүн - өзүм тууралуу айтып берүү.',
+            small: 'Сайт жөнөкөй кылып жасалган, керексиз нерселер жок, негизги максатты сактоо үчүн - өзүм тууралуу айтып берүү.',
             skillsTitle: 'Менин негизги жеткиликтерим:'
         },
         about: {
@@ -133,15 +125,14 @@ export const texts_kg = {
                 images: [geekTech_kg, geekTech_me],
                 title: 'GeekTech (Geeks) да окуу',
                 caption: ['Мендүү IT саласына кирүүм GeekTech (Бугунгү күнө Geeks). Жарым жылдын ичинде мен негизги көндүмдөрдү өздөштүрдүм жана IT тармагында биринчи тажрыйбамды алдым.' +
-                    'Окуга жана окуудан кийин мен кандай жеңил учуучуларга ментор болдум жана ашык темаларды жандырабым.',
+                'Окуга жана окуудан кийин мен кандай жеңил учуучуларга ментор болдум жана ашык темаларды жандырабым.',
                     'Мен бул мүмкүнчүлүгү үчүн GeekTechке күтүлгөн боломмун. Рахмат!'],
-                figcaption: '3 тилдеги варианттар жеткиликтүү. Сайттын тилин өзгөртүңүз, башкаларды көрсөңүз',
             },
             noCode: {
                 images: [noCode_me, noCode],
                 title: 'Muras Academyда окуу',
                 caption: ['GeekTechдеги окуудан кийин мен болдук бирок мен окууга жакшы бир жол табдым. Жаңы темаларды самакчы көчүп жаткан жок болгондо. ' +
-                    'Бир жана туруктагы боюнча кантип-кандай темаларды окууга жакшы бир жол табдым. Бул маанада мен No-Code программалоо мамлекетинде окуу алгандым.',
+                'Бир жана туруктагы боюнча кантип-кандай темаларды окууга жакшы бир жол табдым. Бул маанада мен No-Code программалоо мамлекетинде окуу алгандым.',
                     'No-Code программалоо бул код жазбаган болгону менен тым жакшы аракеттердин мамлекетинде программалоо болуп саналат. ' +
                     'Бул кызыктуу тажрыйба менен мени катуу темаларды манасы жакшы мүмкүндүктөр менен түшүнүштү. Бул чыгармада веб дизайнды меңгерүүдө эле жакшы көмөгүм болду.'],
             },
@@ -149,7 +140,7 @@ export const texts_kg = {
         projects: {
             title: 'Менин проектерим',
             caption: 'Курстардын окуусунан кийин токтобой, дээрлик бардык убактымды практика менен жаңы куралдарды үйрөнүүгө жана өзүмдүн Пет Проекттеримди түзүүгө жумшадым. ' +
-	            'Экинчи жактан менин эң кызыктуу пет-проекттерим менчек аныктамалар менен жана сүрөттөмөлөр менен көрсөтүлгөн. ' +
+                'Экинчи жактан менин эң кызыктуу пет-проекттерим менчек аныктамалар менен жана сүрөттөмөлөр менен көрсөтүлгөн. ' +
                 'Бунун жана коддогу Логика мен Жабдуулардын үлгүлөрүнү көрсөтүү диаграмма бар. Акыркы жерде, проектте колдонулган башка технологиялардын тизмеси берилген. ' +
                 'Акыркыда эки баскыч бар: бири, проект сайтына өтүүгө уруксат берет, жана башкасы - менин Github шаалымдагы шаалымды жана артка кодду көрө аласыздар, жакшы.',
             content: {
@@ -172,14 +163,14 @@ export const texts_kg = {
                     caption: "Баардык кирүү системасындагы эң ачык жумушум. Анын аталымынан тартышкан компания. Бул веб-сайт толук жасалган, стилизациялоо китептери колдонулган жок, " +
                         "менин кирүү менен анимация кабарлуулугумду көрсөтөт. Анимациялар веб-сайтты жандырат, фотодон бөлүшүлбөйт. Веб-сайтты жеке караңыз, төмөнкү баскы басып."
                 },
-	            solarSystem:{
-		            header: 'Күн Системасы',
-		            title: 'Күн Системасы',
-		            caption: 'Бул долбоордун баштапкы максаты — толугу менен башка менин сайттарымдан айырмаланган кейс түзүү.' +
-			            'Андан тышкары, мен 3D, анимациялар менен иштөөнү практика кылып, башка көптөгөн куралдарды колдонуп көрдүм.' +
-			            'Сайтты түзүү учурунда мен чатбот — ChatGPT менен иштөөнү үйрөнүүнү чечтим.' +
-			            'Адистешпеген колдонуучунун көз карашынан алганда, сайт жөн гана Күн системасынын макетин көрсөтөт жана планеталар тууралуу аз гана маалымат берет.',
-	            },
+                solarSystem:{
+                    header: 'Күн Системасы',
+                    title: 'Күн Системасы',
+                    caption: 'Бул долбоордун баштапкы максаты - толугу менен башка менин сайттарымдан айырмаланган кейс түзүү.' +
+                        'Андан тышкары, мен 3D, анимациялар менен иштөөнү практика кылып, башка көптөгөн куралдарды колдонуп көрдүм.' +
+                        'Сайтты түзүү учурунда мен чатбот - ChatGPT менен иштөөнү үйрөнүүнү чечтим.' +
+                        'Адистешпеген колдонуучунун көз карашынан алганда, сайт жөн гана Күн системасынын макетин көрсөтөт жана планеталар тууралуу аз гана маалымат берет.',
+                },
                 miniApps:{
                     header: 'Менин баракчаларым',
                     title: 'Mini-Apps',
@@ -214,17 +205,17 @@ export const texts_en = {
         header: {
             title: 'language',
             links: {
-              about: 'About me',
-              projects: 'Projects',
-              contacts: 'Contacts',
+                about: 'About me',
+                projects: 'Projects',
+                contacts: 'Contacts',
             },
         },
         landing: {
             h3: 'Hello!',
-            h1: ['I\'m a', 'Ruslanbek'],
+            h1: ['I\'m', 'Ruslanbek'],
             h2: 'Front-End Developer',
-            p: 'I am learning to create web projects and building my portfolio.',
-	        small: 'The website is simple, without unnecessary elements, to keep the main goal — telling about myself.',
+            p: 'Building modern web interfaces with a strong focus on clean code and performance.',
+            small: 'Portfolio designed with a lightweight approach to ensure maximum loading speed.',
             skillsTitle: 'My main skills'
         },
         about: {
@@ -232,67 +223,60 @@ export const texts_en = {
             geekTech: {
                 images: [geekTech_en, geekTech_me],
                 title: 'Learning at GeekTech (Geeks)',
-                caption: ['My journey into the IT field began with GeekTech (currently Geeks). In six months, I mastered the basic skills and gained my first experience in IT.' +
-                'During and after my training, I also worked as a mentor and helped struggling students master complex topics.',
-                    'I am grateful to GeekTech for this opportunity. Thank you!'],
-                figcaption: 'Variants are available in three languages. Change the website language to see others.',
+                caption: ['My journey into IT began with fundamental training at GeekTech. In six months, I mastered the core of Frontend development and applied it to real-world tasks.' +
+                'During my training, I also acted as a mentor, helping students with complex architectural topics and code debugging.',
+                    'This experience taught me not only how to write code but also how to effectively communicate technical concepts.'],
             },
             noCode: {
                 images: [noCode_me, noCode],
-                title: 'Training at Muras Academy',
-                caption: ['After completing my training at GeekTech, I didn\'t stop there. I began self-studying new topics. ' +
-                'I didn\'t confine myself to one direction; instead, I explored diverse subjects. This led me to specialize in the field of No-Code programming.',
-                'No-Code programming essentially involves coding without writing code, using a visual interface editor. ' +
-                    'This experience greatly aided my understanding of entirely new topics for me and proved to be crucial in mastering web design.'],
+                title: 'Development at Muras Academy',
+                caption: ['After my courses, I continued to dive into related fields, including specialized training in No-Code development. ' +
+                'This allowed me to broaden my perspective on building application logic and UX/UI design.',
+                    'Experience with visual editors helped me prototype interfaces faster and gain a deeper understanding of responsiveness and semantics.'],
             },
         },
         projects: {
             title: 'My projects',
-            caption: 'After completing the courses, I didn’t stop — I spent almost all this time practicing, learning new tools, and creating my own pet projects. ' +
-	            'Here are my best pet projects with detailed descriptions and photos. ' +
-                'Additionally, there is a diagram illustrating the ratio of Logic to Markup in the code. ' +
-                'Below is a list of the main technologies used in the project. At the end, there are two buttons: ' +
-                'one allows you to go to the project website, and the other - to go to my personal GitHub repository, where you can see all the project code.',
+            caption: 'This section presents my key projects, created with an emphasis on practicing new technologies. ' +
+                'For each case, a diagram of the logic-to-markup ratio and a detailed technology stack are provided. ' +
+                'You can proceed to view the live demo or explore the source code in my GitHub repository.',
             content: {
                 portfolio:{
                     header: "Portfolio",
                     title: "Portfolio",
-                    caption: "Here are my small practical tasks, created during the study of various technologies and programming languages. " +
-                        "From simple scripts to small web applications - each project reflects my experience and ability to apply acquired knowledge in practice." +
-                    "I would like to note that each of my photos on this website is clickable and can be enlarged. This is done with clean code manually, without libraries."
+                    caption: "Portfolio engine with custom localization and image processing logic. " +
+                        "All modal windows and photo zoom functions are implemented in vanilla JS without third-party libraries. " +
+                        "This demonstrates my skill in creating lightweight and independent frontend solutions."
                 },
                 doppioCraft:{
                     header: "Doppio Craft",
                     title: "Doppio Craft",
-                    caption: "My first pet project, where I practiced working with a product catalog. There wasn’t a strong focus on design, but I gained good experience with data and layout."
+                    caption: "E-commerce catalog prototype with a dynamic product list. The project covers data structures, " +
+                        "filtering methods, and principles of building a scalable component architecture."
                 },
                 fitegCopy:{
                     header: "Fiteg",
                     title: "Fiteg copy",
-                    caption: 'My best project in the field of web development, inspired by a company of the same name. This website is entirely handcrafted, ' +
-                        'without the use of styling libraries, showcasing my skills in web design and animation. The animations bring the site to life, ' +
-                        'something not captured through photos. Take a look at the site yourself by clicking the button below.'
+                    caption: 'Premium multi-page website developed with a "Code-First" approach. Zero UI libraries - ' +
+                        'every grid, transition, and animation is custom-coded to achieve maximum smoothness and layout precision.'
                 },
-	            solarSystem:{
-		            header: 'Solar System',
-		            title: 'Solar System',
-		            caption: 'The main goal of this project was to create a case completely different from my other websites.' +
-			            'At the same time, I practiced working with 3D, animations, and explored various tools.' +
-			            'Throughout the development of the site, I decided to learn how to collaborate with a chatbot — ChatGPT.' +
-			            'From the perspective of a regular user, the site simply displays a model of the Solar System and gives a brief overview of the planets.',
-	            },
+                solarSystem:{
+                    header: 'Solar System',
+                    title: 'Solar System',
+                    caption: 'Interactive 3D model focused on rendering performance and working with animations in space. ' +
+                        'During development, I used advanced Prompt Engineering to optimize complex data structures and object movement logic.',
+                },
                 miniApps:{
-                    header: "Mini programs",
+                    header: "Mini-Apps",
                     title: "Mini-Apps",
-                    caption: "My best pet project in terms of logic rather than layout. It will constantly be updated with new applications. " +
-                        "This project is written in Type Script, a new language for me. Practice with it was useful and showed how convenient it is, but at the same time not easy."
+                    caption: "A collection of applications with complex business logic built with TypeScript. The main feature is " +
+                        "a calculator with custom expression parsing and protection against mathematical errors. Demonstrates strong state management with Redux Toolkit."
                 },
                 topTalent:{
                     header: "Top Talent (no-code)",
                     title: "Top Talent company",
-                    caption: "Top Talent - my first pet project developed using no-code technology. This experience was extremely experimental for me and stands out among the others. " +
-                        "There is no code in the project, but to create it, I had to apply other important skills such as creativity, imagination, and design. " +
-                        "In addition, despite the absence of programming, this project required the use of markup and styling languages - HTML and CSS."
+                    caption: "An experimental project to create a comprehensive platform without writing code. " +
+                        "This case highlights my skills in design, user path engineering, and understanding HTML/CSS structure regardless of the development tools."
                 }
             },
             pie: ['Markup','Logic'],
@@ -310,6 +294,6 @@ export const texts_en = {
     },
 };
 
-export const defaultLanguage = texts_ru;
+export const defaultLanguage = texts_en;
 const allTexts = [texts_ru,texts_kg,texts_en];
 export default allTexts;

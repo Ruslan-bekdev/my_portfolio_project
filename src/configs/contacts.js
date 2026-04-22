@@ -18,7 +18,7 @@ export const contactsConfig = {
             {
                 icon: whatsapp,
                 button:{
-                    url: 'https://wa.me/+996225671567',
+                    url: 'https://wa.me/+996504004104',
                     label: 'whatsApp',
                 }
             },

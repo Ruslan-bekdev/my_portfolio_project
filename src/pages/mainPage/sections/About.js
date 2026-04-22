@@ -21,7 +21,6 @@ const About = ({id = '', text}) =>
 			</div>
 			<figure className={classes.about__block1}>
 				<ZoomableImage src={text.geekTech.images[0]} className={classes.about__image}/>
-				<figcaption>{text.geekTech.figcaption}</figcaption>
 			</figure>
 			<div className={classes.about__block2}>
 				<h3>{text.geekTech.title}</h3>
