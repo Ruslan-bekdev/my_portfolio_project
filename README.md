@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My personal portfolio hub designed to showcase my projects, skills, and technical journey as a Web Developer.
 
-## Available Scripts
+## [Live Demo](https://ruslan-bekdev.github.io/my_portfolio_project/)
 
-In the project directory, you can run:
+## Key Features
+* **Custom Project Engine:** Built a modular system to display project details, tech stacks, and logic-to-markup ratios using a centralized configuration.
+* **Interactive UI:** Smooth transitions and optimized navigation using React components.
+* **Responsive Design:** Fully adapted for mobile, tablet, and desktop views with a focus on UX (including custom scroll indicators and touch-friendly controls).
+* **Localization Ready:** Implemented a custom localization logic to handle content in multiple languages.
 
-### `npm start`
+## Tech Stack
+* **Core:** React 18, Vite
+* **Styling:** SASS (Sass Modules), Material UI (MUI) for complex components.
+* **Data Visualization:** Custom charts to demonstrate project complexity (logic vs markup).
+* **Icons & Branding:** Skill Icons and custom SVG integration.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technical Highlights
+* **Persistent Multi-Language System:** Implemented a robust localization engine supporting English, Russian, and Korean. Used `localStorage` to sync and persist user language preferences across sessions, ensuring a seamless UX.
+* **Data-Driven Architecture:** The entire "Projects" section is powered by a centralized configuration layer. This decoupling of data from the UI allows for managing complex project metadata (tech stacks, logic-to-markup ratios, and external links) in one place.
+* **Component-Based Logic:** Leveraged React's modularity to create reusable UI elements like `ScrollableImage`, `TooltipedImage`, and custom action buttons, maintaining a clean and maintainable codebase.
+* **Advanced UI Polishing:** Integrated Material UI with custom SASS overrides to create a unique dark-themed aesthetic with intuitive navigation controls, including forced scroll indicators for mobile users.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## How to run locally
+1. `git clone https://github.com/Ruslan-bekdev/my_portfolio_project.git`
+2. `npm install`
+3. `npm run dev`

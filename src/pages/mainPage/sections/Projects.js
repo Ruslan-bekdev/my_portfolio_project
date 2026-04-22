@@ -1,4 +1,4 @@
-import React, {useState, Fragment, useEffect} from 'react';
+import React, {useState, Fragment} from 'react';
 import classes from '../MainPage.module.sass';
 import {Tab,Tabs} from "@mui/material";
 import ScrollableImage from "../../../components/other/scrollableImage/ScrollableImage";
@@ -11,6 +11,7 @@ import CustomPie from "../../../components/other/charts/Pie";
 const Projects = ({id = '', text}) => {
     const projectsText = text.content;
     const [projectTab,setProjectTab] = useState(0);
+    const projectsConfigEntries = Object.entries(projectsConfig);
 
     const handleProjectChange = (e,newValue) => {
       setProjectTab(newValue);
@@ -24,20 +25,18 @@ const Projects = ({id = '', text}) => {
         const handleImageChange = (e,newValue) => {
             setImageTab(newValue);
         };
+        const imagesEntries = Object.entries(images);
 
         return (
             <div className={classes.images}>
-                {
-                    Object.entries(images).map(([key,value],index)=>{
-                        return imageTab === index && (
-                            <ScrollableImage
-                                src={value}
-                                alt='Site screen'
-                                key={key}
-                            />
-                        );
-                    })
-                }
+                {imagesEntries.map(([key,value],index)=>
+                    imageTab === index && (
+                        <ScrollableImage
+                            src={value}
+                            alt='Site screen'
+                            key={key}
+                        />
+                    ))}
                 <Tabs
                     variant="scrollable"
                     value={imageTab}
@@ -45,7 +44,7 @@ const Projects = ({id = '', text}) => {
                     className={classes.tabs}
                 >
                     {
-                        Object.entries(images).map(([key]) =>
+                        imagesEntries.map(([key]) =>
                             <Tab
                                 label={key}
                                 key={key}
@@ -61,11 +60,12 @@ const Projects = ({id = '', text}) => {
       return (
         <Tabs
             variant="scrollable"
+            allowScrollButtonsMobile
             value={projectTab}
             onChange={handleProjectChange}
             className={classes.tabs}
         >
-            {Object.entries(projectsConfig).map(([key,value])=>
+            {projectsConfigEntries.map(([key,value])=>
                 <Tab
                     label={projectsText[key].header}
                     key={key}
@@ -79,13 +79,11 @@ const Projects = ({id = '', text}) => {
             <div
                 className={classes.project}
             >
-                {Object.entries(projectsConfig).map(([key,value],index) => {
+                {projectsConfigEntries.map(([key,value],index) => {
                     const {pie, icons, images, url, github} = value;
                     return projectTab === index && (
                         <Fragment key={key}>
-                            {images &&
-                                <RenderImages images={images}/>
-                            }
+                            {images && <RenderImages images={images}/>}
                             <div
                                 className={images
                                     ?classes.project__caption
@@ -131,17 +129,11 @@ const Projects = ({id = '', text}) => {
             className={`${classes.projects} container`}
         >
             <div>
-                <h2
-                    className={classes.projects__title}
-                >
-                    {text.title} ({Object.entries(projectsConfig).length})
+                <h2 className={classes.projects__title}>
+                    {text.title} ({projectsConfigEntries.length})
                 </h2>
-                <p
-                    className={classes.projects__caption}
-                >{text.caption}</p>
-                <div
-                    className={classes.projects__wrapper}
-                >
+                <p className={classes.projects__caption}>{text.caption}</p>
+                <div className={classes.projects__wrapper}>
                     <RenderTabs/>
                     <RenderContent/>
                 </div>
