@@ -6,11 +6,11 @@ import TooltipedImage from "../../../components/other/tooltopedImage/TooltipedIm
 
 const iconsSet = [
 	{icons: 'js,ts,redux', tooltip: 'JavaScript, TypeScript, Redux, Redux Toolkit'},
-	{icons: 'html,css,sass,less', tooltip: 'HTML, CSS, Sass'},
-	{icons: 'bootstrap,materialui,styledcomponents,threejs', tooltip: 'Bootstrap, Material UI, Styled Components', divider:true},
-	{icons: 'react,vite', tooltip: 'React'},
+	{icons: 'html,css,sass,less', tooltip: 'HTML, CSS, Sass, Less'},
+	{icons: 'bootstrap,materialui,styledcomponents', tooltip: 'Bootstrap, Material UI, Styled Components', divider:true},
+	{icons: 'react,vite', tooltip: 'React, Vite'},
 	{icons: 'git,github', tooltip: 'Git, GitHub'},
-	{icons: 'figma,ai,jetbrains', tooltip: 'Figma'},
+	{icons: 'figma', tooltip: 'Figma'},
 ];
 
 const Landing = ({text}) => {
