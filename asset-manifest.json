@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/my_portfolio_project/static/css/main.a5e6c12b.css",
-    "main.js": "/my_portfolio_project/static/js/main.ba272c13.js",
+    "main.css": "/my_portfolio_project/static/css/main.c08870d9.css",
+    "main.js": "/my_portfolio_project/static/js/main.a9e06abb.js",
     "static/media/desktop.png": "/my_portfolio_project/static/media/desktop.a113922e600f275bb84e.png",
     "static/media/geektech_ru.JPG": "/my_portfolio_project/static/media/geektech_ru.ee7dc4e710544ab46979.JPG",
     "static/media/geektech_kg.JPG": "/my_portfolio_project/static/media/geektech_kg.e71463f94742fa7db0af.JPG",
     "static/media/geektech_en.JPG": "/my_portfolio_project/static/media/geektech_en.3365b5aa83fdced2adf0.JPG",
     "static/media/geektech_me.jpg": "/my_portfolio_project/static/media/geektech_me.0934a2ec13fbc2b4da78.jpg",
+    "static/media/img.jpg": "/my_portfolio_project/static/media/img.7c21d3beaae662a27c04.jpg",
     "static/media/jupiter.png": "/my_portfolio_project/static/media/jupiter.47d7dd7dda6e00ab4606.png",
     "static/media/mobile.png": "/my_portfolio_project/static/media/mobile.7caa9f69ca27cd896a9e.png",
     "static/media/jupiterInShadow.png": "/my_portfolio_project/static/media/jupiterInShadow.678db66b6427d19869d0.png",
     "static/media/noCode.JPG": "/my_portfolio_project/static/media/noCode.a119970939c1aec6acb4.JPG",
     "static/media/noCode_me.jpg": "/my_portfolio_project/static/media/noCode_me.0426f1231b299964c636.jpg",
     "static/media/weather.png": "/my_portfolio_project/static/media/weather.49cc9538c58f2fabd9b9.png",
-    "static/media/img.jpg": "/my_portfolio_project/static/media/img.e6abce0d0c3db7fc03f6.jpg",
     "static/media/calculator.png": "/my_portfolio_project/static/media/calculator.fa13482a51ef60fd1f42.png",
     "static/media/converter.png": "/my_portfolio_project/static/media/converter.a5f0135923fcf04a22d2.png",
     "static/media/international.svg": "/my_portfolio_project/static/media/international.61ab28c9e149fff3ec081625095d567e.svg",
@@ -21,11 +21,11 @@
     "static/media/email.svg": "/my_portfolio_project/static/media/email.d962616b45ba648f23392d8660449f5c.svg",
     "static/media/whatsapp.svg": "/my_portfolio_project/static/media/whatsapp.eb46d263ab91f1242cb74ad50ea4acf1.svg",
     "index.html": "/my_portfolio_project/index.html",
-    "main.a5e6c12b.css.map": "/my_portfolio_project/static/css/main.a5e6c12b.css.map",
-    "main.ba272c13.js.map": "/my_portfolio_project/static/js/main.ba272c13.js.map"
+    "main.c08870d9.css.map": "/my_portfolio_project/static/css/main.c08870d9.css.map",
+    "main.a9e06abb.js.map": "/my_portfolio_project/static/js/main.a9e06abb.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5e6c12b.css",
-    "static/js/main.ba272c13.js"
+    "static/css/main.c08870d9.css",
+    "static/js/main.a9e06abb.js"
   ]
 }
